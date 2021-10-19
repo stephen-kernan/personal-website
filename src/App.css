@@ -102,3 +102,22 @@ li {
 .sub-section {
   margin: 1.5em auto 0.75em auto;
 }
+
+@media (max-width: 850px) {
+  .dark-mode-paper {
+    padding: 2em 3em !important;
+    margin: 2em auto;
+  }
+}
+
+@media (max-width: 450px) {
+  h1 {
+    margin-top: 1em;
+    font-size: 1.75em;
+  }
+
+  .dark-mode-paper {
+    padding: 0.75em 1.25em !important;
+    margin: 2em auto;
+  }
+}

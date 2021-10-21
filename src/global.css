@@ -1,0 +1,48 @@
+/* PAGE-LEVEL */
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.65em;
+}
+
+p, li {
+  margin-bottom: 1em !important;
+}
+
+h1 {
+  margin-bottom: 1rem !important;
+}
+
+:is(h2, h3, h4) {
+  margin-bottom: 0.75rem !important;
+}
+
+:is(h1, h2) {
+  margin-top: 2.5rem !important;
+}
+
+:is(h3, h4) {
+  margin-top: 1.75rem !important;
+}
+
+.wrapper {
+  margin: 0 !important;
+  background-color: #373638;
+}
+
+/* PAPER USED ON EVERY PAGE */
+.dark-mode-paper {
+  padding: 5em 8em !important;
+  margin: 2em auto;
+}
+
+.dark-mode-paper {
+  background-color: hsl(270, 2%, 25%) !important;
+  color: #f3f2f1 !important;
+}

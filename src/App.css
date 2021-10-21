@@ -37,29 +37,10 @@
   }
 }
 
-html,
-body {
-  margin: 0;
-  height: 100%;
-}
-
-body {
-  font-family: "Source Code Pro", monospace, sans-serif;
-  font-weight: 600;
-  color: #f3f2f1;
-  margin: 0 !important;
-  padding: 0 !important;
-  line-height: 1.65em;
-}
-
-:is(h1, h2, h3, h4, h5, h6) {
-  font-family: "Poppins", sans-serif !important;
-  color: #f3f2f1;
-}
 
 .page-header {
-  font-family: "Source Code Pro", sans-serif !important;
-  font-size: 1.5em !important;
+  font-family: "Poppins", sans-serif !important;
+  font-size: 1.75em !important;
   font-weight: 800 !important;
   color: #f3f2f1 !important;
 }
@@ -83,16 +64,6 @@ ol > span {
 h1,
 h2 {
   color: #5dbfa2;
-}
-
-.dark-mode-paper {
-  padding: 5em 8em !important;
-  margin: 2em auto;
-}
-
-.dark-mode-paper {
-  background-color: hsl(270, 2%, 25%) !important;
-  color: #f3f2f1 !important;
 }
 
 li {

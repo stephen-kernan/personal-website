@@ -1,0 +1,40 @@
+.global-nav {
+  margin: 0 !important;
+}
+
+.global-nav__page-header,
+.global-nav__settings {
+  width: 20%;
+}
+
+.global-nav__link {
+  cursor: pointer;
+}
+
+.global-nav__link--active {
+  cursor: pointer;
+  border-bottom: 3px solid white;
+}
+
+.global-nav__container {
+  display: flex;
+  justify-content: space-between !important;
+}
+
+.global-nav__middle-section {
+  display: flex;
+  gap: 1rem !important;
+  justify-content: center;
+}
+
+.global-nav__settings {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.settings-modal__box {
+  margin: auto !important;
+  background-color: "#373737" !important;
+}

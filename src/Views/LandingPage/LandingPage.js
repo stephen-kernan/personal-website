@@ -1,16 +1,8 @@
-import {
-  AppBar,
-  Button,
-  Chip,
-  Container,
-  Grid,
-  Link,
-  Paper,
-  Toolbar,
-  Typography,
-} from "@mui/material";
+import { Container, Grid } from "@mui/material";
 import { useTheme } from "@mui/system";
 import React from "react";
+import { HeroSection } from "../../Components/HeroSection/HeroSection";
+import { ProgrammerSVG } from "../../Components/SVGs/ProgrammerSVG";
 import profileImage from "../../images/profile-pic-edited.png";
 import "./landingPage.css";
 
@@ -74,28 +66,31 @@ export const LandingPage = () => {
   return (
     <div className="page-container">
       <Container maxWidth="xl">
-        <Paper className="dark-mode-paper" elevation={2}>
-          <Grid container spacing={4}>
-            <Grid item xs={12} md={8}>
-              <Typography variant="h1" component="h1" color="primary">
-                Hi, I'm Stephen
-              </Typography>
-              <Typography variant="body1" component="p">
-                I’m a software engineer living in Saint Louis, MO. I am
+        <Grid container spacing={0} className="">
+          <HeroSection
+            float="right"
+            buttonLabel="View My Github"
+            headerText="Hi, I'm Stephen"
+            image={<ProfileSVG theme={theme} />}
+            paragraphText="I’m a software engineer living in Saint Louis, MO. I am
                 passionate about learning and my goal is to share what I’ve
                 learned in order to grow and to help others improve. Welcome to
                 my personal website, where I keep my personal projects as well
-                as a record of the things I’m learning.
-              </Typography>
-              <Button variant="contained" color="primary" sx={{ fontSize: "1.25rem", fontWeight: '600' }}>
-                View My Github
-              </Button>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <ProfileSVG theme={theme} />
-            </Grid>
-          </Grid>
-        </Paper>
+                as a record of the things I’m learning."
+          />
+          <HeroSection
+            float="left"
+            buttonLabel="Here's a Guide"
+            buttonVariant="outlined"
+            headerText="Learning to Code?"
+            image={<ProgrammerSVG theme={theme} />}
+            paragraphText="I’m a software engineer living in Saint Louis, MO. I am
+                passionate about learning and my goal is to share what I’ve
+                learned in order to grow and to help others improve. Welcome to
+                my personal website, where I keep my personal projects as well
+                as a record of the things I’m learning."
+          />
+        </Grid>
       </Container>
     </div>
   );

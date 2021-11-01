@@ -45,9 +45,19 @@
   color: #f3f2f1 !important;
 }
 
-.page-container,
 .page-nav {
   background-color: #373638 !important;
+}
+
+.page-container {
+  padding: 5em;
+}
+
+.landing-page {
+  padding: 3em;
+}
+
+.page-nav {
   margin: 0;
 }
 

@@ -6,7 +6,11 @@ import { BrowserRouter, Switch } from "react-router-dom";
 import { LandingPage } from "./Views/LandingPage/LandingPage";
 import { PageRoute } from "./PageRoute";
 import { About } from "./Views/About/About";
-import { createTheme, lighten, ThemeProvider } from "@mui/material";
+import {
+  createTheme,
+  CssBaseline,
+  ThemeProvider,
+} from "@mui/material";
 import { LearnToCode } from "./Views/LearnToCode/LearnToCode";
 
 const bakugoLight = "#f3f2f1";
@@ -31,19 +35,23 @@ const selectedColor = localStorage.getItem("themeColor");
 let primary = selectedColor ? colorHexes[selectedColor] : deku;
 
 export const App = () => {
+  const isDarkMode = localStorage.getItem("darkMode") === "true";
+  let background = isDarkMode ? eraserHead : bakugoLight;
   const [color, setColor] = useState(primary);
+  const [darkMode, setDarkMode] = useState(isDarkMode);
 
   const mhaTheme = createTheme({
     palette: {
-      mode: "dark",
+      mode: "light",
+      ...colorHexes,
       text: {
-        primary: bakugoLight,
-        contrastText: bakugoLight,
-        icon: bakugoLight,
+        primary: eraserHead,
+        contrastText: eraserHead,
+        icon: eraserHead,
       },
       background: {
-        main: eraserHead,
-        paper: lighten(eraserHead, 0.05),
+        default: background,
+        paper: background,
       },
       primary: {
         main: color,
@@ -53,7 +61,7 @@ export const App = () => {
       fontFamily: "'Poppins', sans-serif",
       h1: {
         fontSize: "3rem",
-        fontWeight: 700,
+        fontWeight: 600,
       },
       h2: {
         fontSize: "2rem",
@@ -76,12 +84,33 @@ export const App = () => {
     },
   });
 
+  const darkModeAdditions = createTheme({
+    ...mhaTheme,
+    palette: {
+      ...mhaTheme.palette,
+      mode: "dark",
+      text: {
+        primary: bakugoLight,
+        contrastText: bakugoLight,
+        icon: bakugoLight,
+      },
+    },
+  });
+
   const changeTheme = (newColor) => {
+    localStorage.setItem("themeColor", newColor);
     setColor(colorHexes[newColor]);
   };
 
+  const toggleDarkMode = () => {
+    const newValue = !darkMode;
+    localStorage.setItem("darkMode", newValue);
+    setDarkMode(newValue);
+  };
+
   return (
-    <ThemeProvider theme={mhaTheme}>
+    <ThemeProvider theme={darkMode ? darkModeAdditions : mhaTheme}>
+      <CssBaseline />
       <BrowserRouter>
         <Switch>
           <PageRoute
@@ -89,18 +118,21 @@ export const App = () => {
             exact
             component={LandingPage}
             changeTheme={changeTheme}
+            toggleDarkMode={toggleDarkMode}
           />
           <PageRoute
             path="/about"
             exact
             component={About}
             changeTheme={changeTheme}
+            toggleDarkMode={toggleDarkMode}
           />
           <PageRoute
             path="/blog"
             exact
             component={LearnToCode}
             changeTheme={changeTheme}
+            toggleDarkMode={toggleDarkMode}
           />
         </Switch>
       </BrowserRouter>

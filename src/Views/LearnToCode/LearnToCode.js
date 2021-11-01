@@ -1,9 +1,6 @@
 import {
-  AppBar,
   Container,
   Link,
-  Paper,
-  Toolbar,
   Typography,
 } from "@mui/material";
 import React from "react";
@@ -11,8 +8,7 @@ import React from "react";
 export const LearnToCode = () => {
   return (
     <div className="page-container">
-      <Container maxWidth="xl">
-        <Paper className="dark-mode-paper" elevation={2}>
+      <Container maxWidth="lg">
           <Typography variant="h1" sx={{ color: 'primary.main' }} component="h1">
             learnToCode()<span style={{ color: "#f3f2f1" }}>;</span>
           </Typography>
@@ -554,7 +550,6 @@ export const LearnToCode = () => {
               customize your aesthetic 🔥.
             </Typography>
           </section>
-        </Paper>
       </Container>
     </div>
   );

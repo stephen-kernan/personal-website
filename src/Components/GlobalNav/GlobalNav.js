@@ -2,7 +2,6 @@ import {
   AppBar,
   Box,
   FormControl,
-  Icon,
   IconButton,
   InputLabel,
   Link,
@@ -16,7 +15,7 @@ import {
 } from "@mui/material";
 import SettingsIcon from "@mui/icons-material/Settings";
 import React, { useState } from "react";
-import { useHistory, useLocation } from "react-router";
+import { useLocation } from "react-router";
 
 import "./globalNav.css";
 
@@ -52,7 +51,6 @@ export const SettingsModal = ({ changeTheme, onClose }) => {
 
   const selectTheme = ({ target: { value } }) => {
     setActiveTheme(value);
-    localStorage.setItem("themeColor", value);
     changeTheme(value);
   };
 
@@ -121,11 +119,12 @@ export const SettingsModal = ({ changeTheme, onClose }) => {
   );
 };
 
-export const GlobalNav = ({ changeTheme }) => {
+export const GlobalNav = ({ changeTheme, toggleDarkMode }) => {
   const [modal, setModal] = useState(null);
   const location = useLocation();
   const theme = useTheme();
   const activeLink = location.pathname;
+  const isDarkMode = localStorage.getItem("darkMode") === "true";
 
   const links = [
     {
@@ -136,10 +135,10 @@ export const GlobalNav = ({ changeTheme }) => {
       label: "blog",
       path: "/blog",
     },
-    {
-      label: "projects",
-      path: "/projects",
-    },
+    // {
+    //   label: "projects",
+    //   path: "/projects",
+    // },
   ];
 
   const toggleSettingsModal = () => {
@@ -148,13 +147,13 @@ export const GlobalNav = ({ changeTheme }) => {
 
   return (
     <AppBar position="static" className="page-nav global-nav">
-      <Toolbar className="global-nav__container">
+      <Toolbar className="global-nav__container" sx={{ bgcolor: "eraserHead" }}>
         <Link href="/" underline="none">
           <Typography
             variant="h2"
             component="a"
             className="global-nav__page-header global-nav__link"
-            sx={{ color: "text.primary" }}
+            sx={{ color: "bakugoLight" }}
           >
             stephen kernan
           </Typography>
@@ -168,7 +167,7 @@ export const GlobalNav = ({ changeTheme }) => {
                 component="a"
                 className="global-nav__link"
                 sx={{
-                  color: "text.primary",
+                  color: "bakugoLight",
                   borderBottom: `4px solid ${
                     activeLink === link.path
                       ? theme.palette.primary.main
@@ -183,9 +182,13 @@ export const GlobalNav = ({ changeTheme }) => {
         </div>
 
         <div className="global-nav__settings">
-          <Switch inputProps={{ "aria-label": "dark-mode" }} defaultChecked />
+          <Switch
+            inputProps={{ "aria-label": "dark-mode" }}
+            defaultChecked={isDarkMode}
+            onClick={toggleDarkMode}
+          />
           <IconButton onClick={toggleSettingsModal}>
-            <SettingsIcon sx={{ color: "text.primary" }} />
+            <SettingsIcon sx={{ color: "bakugoLight" }} />
           </IconButton>
         </div>
       </Toolbar>

@@ -33,7 +33,6 @@ h1 {
 
 .wrapper {
   margin: 0 !important;
-  background-color: #373638;
 }
 
 /* PAPER USED ON EVERY PAGE */
@@ -42,7 +41,7 @@ h1 {
   margin: 2em auto;
 }
 
-.dark-mode-paper {
-  background-color: hsl(270, 2%, 25%) !important;
-  color: #f3f2f1 !important;
+
+button {
+  text-transform: none !important;
 }

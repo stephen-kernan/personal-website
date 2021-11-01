@@ -38,3 +38,8 @@
   margin: auto !important;
   background-color: "#373737" !important;
 }
+
+[class$='-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input'] {
+  display: flex !important;
+  align-items: center !important;
+}

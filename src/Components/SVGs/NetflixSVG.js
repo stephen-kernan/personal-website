@@ -1,5 +1,4 @@
 import React from "react";
-import './SVGs.css';
 
 export const NetflixSVG = ({ theme }) => {
   return (

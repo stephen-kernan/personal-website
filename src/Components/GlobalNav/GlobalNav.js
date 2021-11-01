@@ -1,6 +1,8 @@
 import {
   AppBar,
+  Badge,
   Box,
+  Chip,
   FormControl,
   IconButton,
   InputLabel,
@@ -24,7 +26,7 @@ export const SettingsModal = ({ changeTheme, onClose }) => {
     localStorage.getItem("themeColor") || "deku"
   );
 
-  const theme = useTheme();
+  const globalTheme = useTheme();
 
   const themes = [
     {
@@ -100,7 +102,9 @@ export const SettingsModal = ({ changeTheme, onClose }) => {
         <FormControl style={{ width: "75%" }}>
           <InputLabel id="theme-select-label">Theme</InputLabel>
           <Select
-            inputLabelProps={{ style: { color: theme.palette.primary.main } }}
+            inputLabelProps={{
+              style: { color: globalTheme.palette.primary.main },
+            }}
             xs={{ color: "primary.main", borderColor: "primary.main" }}
             labelId="theme-select-label"
             data-testid="theme-select"
@@ -110,7 +114,21 @@ export const SettingsModal = ({ changeTheme, onClose }) => {
             onChange={selectTheme}
           >
             {themes.map((theme) => (
-              <MenuItem value={theme.value}>{theme.label}</MenuItem>
+              <MenuItem
+                value={theme.value}
+                sx={{ display: "flex", flexFlow: "row" }}
+              >
+                <div
+                  style={{
+                    width: "12px",
+                    height: "12px",
+                    borderRadius: "25px",
+                    marginRight: "5px",
+                    backgroundColor: globalTheme.palette[theme.value],
+                  }}
+                ></div>
+                {theme.label}
+              </MenuItem>
             ))}
           </Select>
         </FormControl>

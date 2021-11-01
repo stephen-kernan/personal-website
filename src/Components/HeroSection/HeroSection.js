@@ -1,4 +1,4 @@
-import { Button, Grid, Typography } from "@mui/material";
+import { Button, Grid, Link, Typography } from "@mui/material";
 import React from "react";
 
 import "./heroSection.css";
@@ -9,8 +9,11 @@ export const HeroSection = ({
   headerText,
   paragraphText,
   buttonLabel,
+  buttonLink,
   buttonVariant = "contained",
 }) => {
+  const isExternalLink =
+    buttonLink && !buttonLink.includes(window.location.hostname);
   if (!float) return null;
 
   if (float === "right")
@@ -24,13 +27,19 @@ export const HeroSection = ({
             {paragraphText}
           </Typography>
           {buttonLabel && (
-            <Button
-              variant={buttonVariant}
-              color="primary"
-              sx={{ fontSize: "1.25rem", fontWeight: "600" }}
+            <Link
+              href={buttonLink}
+              underline="none"
+              target={isExternalLink ? "_blank" : "_self"}
             >
-              {buttonLabel}
-            </Button>
+              <Button
+                variant={buttonVariant}
+                color="primary"
+                sx={{ fontSize: "1.25rem", fontWeight: "600" }}
+              >
+                {buttonLabel}
+              </Button>
+            </Link>
           )}
         </Grid>
         <Grid item xs={12} md={4}>
@@ -53,13 +62,19 @@ export const HeroSection = ({
             {paragraphText}
           </Typography>
           {buttonLabel && (
-            <Button
-              variant={buttonVariant}
-              color="primary"
-              sx={{ fontSize: "1.25rem", fontWeight: "600" }}
+            <Link
+              href={buttonLink}
+              underline="none"
+              target={isExternalLink ? "_blank" : "_self"}
             >
-              {buttonLabel}
-            </Button>
+              <Button
+                variant={buttonVariant}
+                color="primary"
+                sx={{ fontSize: "1.25rem", fontWeight: "600" }}
+              >
+                {buttonLabel}
+              </Button>
+            </Link>
           )}
         </Grid>
       </Grid>

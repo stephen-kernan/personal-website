@@ -1,7 +1,6 @@
 import { Container, Grid } from "@mui/material";
 import { useTheme } from "@mui/system";
 import React from "react";
-import { useHistory, useLocation } from "react-router";
 import { HeroSection } from "../../Components/HeroSection/HeroSection";
 import { ProgrammerSVG } from "../../Components/SVGs/ProgrammerSVG";
 import profileImage from "../../images/profile-pic-edited.png";
@@ -86,7 +85,7 @@ export const LandingPage = () => {
           <HeroSection
             float="left"
             buttonLabel="Here's a Guide"
-            buttonLink={'http://' + hostname + "/blog"}
+            buttonLink={"http://" + hostname + "/blog"}
             buttonVariant="outlined"
             headerText="Learning to Code?"
             image={<ProgrammerSVG theme={theme} />}

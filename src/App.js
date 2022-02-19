@@ -3,15 +3,11 @@ import "./index.css";
 import "./App.css";
 import "./global.css";
 import { BrowserRouter, Switch } from "react-router-dom";
-import { LandingPage } from "./Views/LandingPage/LandingPage";
+import { LandingPage } from "./pages/LandingPage";
 import { PageRoute } from "./PageRoute";
-import { About } from "./Views/About/About";
-import {
-  createTheme,
-  CssBaseline,
-  ThemeProvider,
-} from "@mui/material";
-import { LearnToCode } from "./Views/LearnToCode/LearnToCode";
+import { About } from "./pages/About";
+import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
+import { LearnToCode } from "./pages/LearnToCode";
 
 const bakugoLight = "#f3f2f1";
 const eraserHead = "#373638";
@@ -79,7 +75,7 @@ export const App = () => {
         lineHeight: "1.75em",
       },
       body2: {
-        fontSize: "1.5rem",
+        fontSize: "1.25rem",
       },
     },
   });

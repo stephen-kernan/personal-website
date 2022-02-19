@@ -86,7 +86,7 @@ export const LandingPage = () => {
             float="left"
             buttonLabel="Here's a Guide"
             buttonLink={"http://" + hostname + "/blog"}
-            buttonVariant="outlined"
+            buttonVariant="contained"
             headerText="Learning to Code?"
             image={<ProgrammerSVG theme={theme} />}
             paragraphText="I've been there, and I know it can be tough. That's why I have compiled a list of resources, tips, and tricks that I found helpful while learning to code. The best part? They're all free! Check it out below!"

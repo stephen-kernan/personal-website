@@ -166,7 +166,7 @@ export const GlobalNav = ({ changeTheme, toggleDarkMode }) => {
       <Toolbar className="global-nav__container" sx={{ bgcolor: "eraserHead" }}>
         <Link href="/" underline="none">
           <Typography
-            variant="h2"
+            variant="h3"
             component="a"
             className="global-nav__page-header global-nav__link"
             sx={{ color: "bakugoLight" }}

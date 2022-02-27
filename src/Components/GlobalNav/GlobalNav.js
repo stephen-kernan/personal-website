@@ -4,7 +4,6 @@ import {
   Drawer,
   IconButton,
   Link,
-  Menu,
   Switch,
   Toolbar,
   Typography,
@@ -17,8 +16,6 @@ import { useLocation } from "react-router";
 
 import "./globalNav.css";
 import { SettingsModal } from "../SettingsModal/SettingsModal";
-import { Pages } from "@mui/icons-material";
-import { color } from "@mui/system";
 
 export const MobileDrawer = ({ links, activeLink }) => {
   const theme = useTheme();

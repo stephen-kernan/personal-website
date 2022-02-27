@@ -8,56 +8,50 @@ import "./landingPage.css";
 
 export const ProfileSVG = ({ theme }) => {
   return (
-    <svg
-      style={{ width: "100%", aspectRatio: 1.1 }}
-      viewBox="0 0 472 514"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M219.047 140.338C298.037 74.8665 408.06 29.2314 420.192 110.198C432.324 191.165 317.086 475.876 240.149 487.404C163.211 498.933 38.5864 318.006 26.4544 237.039C14.3224 156.072 140.057 205.809 219.047 140.338Z"
-        fill={theme.palette.primary.main}
-      />
-      <mask
-        id="mask0_3:74"
-        style={{ maskType: "alpha" }}
-        maskUnits="userSpaceOnUse"
-        x="24"
-        y="25"
-        width="398"
-        height="463"
+    <div style={{ display: "flex", justifyContent: "flex-end" }}>
+      <svg
+        style={{ maxWidth: "min(50vw, 18em)" }}
+        viewBox="0 0 2750 3000"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M134.431 60.1053C213.421 -5.36592 408.06 29.2314 420.192 110.198C432.324 191.165 317.086 475.876 240.149 487.404C163.211 498.933 38.5864 318.006 26.4544 237.039C14.3224 156.072 55.4412 125.577 134.431 60.1053Z"
-          fill="white"
+          d="M934.166 355.205C1315.68 38.9823 1847.09 -181.433 1905.68 209.633C1964.28 600.699 1407.69 1975.84 1036.09 2031.52C664.484 2087.2 62.5557 1213.33 3.95863 822.267C-54.6384 431.201 552.65 671.427 934.166 355.205Z"
+          fill={theme.palette.primary.main}
+          style={{ transform: "scale(1.25)" }}
         />
-      </mask>
-      <g mask="url(#mask0_3:74)">
-        <rect
-          x="-9.06876"
-          y="30.6053"
-          width="474"
-          height="474"
-          fill="url(#pattern0)"
-        />
-      </g>
-      <defs>
-        <pattern
-          id="pattern0"
-          patternContentUnits="objectBoundingBox"
-          width="1"
-          height="1"
-        >
-          <use href="#image0_3:74" transform="scale(0.000520833)" />
-        </pattern>
         <image
-          id="image0_3:74"
-          width="1920"
-          height="1920"
+          alt="text"
+          id="image0:74"
+          style={{ clipPath: "url(#myClip)", transform: "scale(1.25)" }}
+          height="2035"
+          width="2035"
           href={profileImage}
         />
-      </defs>
-    </svg>
+        <defs>
+          <clipPath id="myClip" clipPath="objectBoundingBox">
+            <path
+              d="M0 5.205C315.68 8.9823 1847.09 -1081.433 1905.68 109.633C1964.28 600.699 1407.69 1975.84 1036.09 2031.52C664.484 2087.2 62.5557 1213.33 3.95863 822.267C-54.6384 431.201 552.65 671.427 934.166 55.205Z"
+              fill="white"
+            />
+          </clipPath>
+          <pattern
+            id="pattern0"
+            patternContentUnits="userSpaceOnUse"
+            width="100%"
+            height="100%"
+          >
+            <use href="#image0_3:74" />
+          </pattern>
+          <image
+            id="image0_3:74"
+            height="2035"
+            width="2035"
+            href={profileImage}
+          />
+        </defs>
+      </svg>
+    </div>
   );
 };
 

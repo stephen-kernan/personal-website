@@ -114,12 +114,14 @@ export const GlobalNav = ({ changeTheme, toggleDarkMode }) => {
   return (
     <AppBar position="static" className="page-nav global-nav">
       <Toolbar className="global-nav__container" sx={{ bgcolor: "eraserHead" }}>
-        <MobileNav
-          links={links}
-          activeLink={activeLink}
-          open={displayMenu}
-          toggleMenu={toggleMenu}
-        />
+        <Box sx={{ display: { xs: "flex", md: "none" } }}>
+          <MobileNav
+            links={links}
+            activeLink={activeLink}
+            open={displayMenu}
+            toggleMenu={toggleMenu}
+          />
+        </Box>
         <Link href="/" underline="none">
           <Typography
             variant="h3"

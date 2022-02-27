@@ -1,5 +1,5 @@
 import { Container, Grid } from "@mui/material";
-import { useTheme } from "@mui/system";
+import { Box, useTheme } from "@mui/system";
 import React from "react";
 import { HeroSection } from "../../Components/HeroSection/HeroSection";
 import { ProgrammerSVG } from "../../Components/SVGs/ProgrammerSVG";
@@ -8,7 +8,16 @@ import "./landingPage.css";
 
 export const ProfileSVG = ({ theme }) => {
   return (
-    <div style={{ display: "flex", justifyContent: "flex-end" }}>
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "flex-end",
+        transform: {
+          xs: "translateY(0)",
+          md: "translateY(50px)",
+        },
+      }}
+    >
       <svg
         style={{ maxWidth: "min(50vw, 18em)" }}
         viewBox="0 0 2750 3000"
@@ -51,7 +60,7 @@ export const ProfileSVG = ({ theme }) => {
           />
         </defs>
       </svg>
-    </div>
+    </Box>
   );
 };
 

@@ -68,7 +68,7 @@ export const LandingPage = () => {
     location.hostname === "localhost" ? location.host : location.hostname;
   return (
     <div className="page-container">
-      <Container maxWidth="xl">
+      <Container>
         <Grid container spacing={0} className="">
           <HeroSection
             float="right"

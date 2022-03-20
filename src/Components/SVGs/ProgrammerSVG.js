@@ -7,15 +7,13 @@ export const ProgrammerSVG = ({ theme }) => {
       xmlns="http://www.w3.org/2000/svg"
       id="currentIllo"
       data-name="Layer 1"
-      width="100%"
-      height="100%"
-      viewBox="68 100 525 525"
+      viewBox="68 100 500 500"
       class="injected-svg DownloadModal__ImageFile-sc-p17csy-5 iIfSkb grid_media"
     >
       <path
         d="M820.91,636.34a289.004,289.004,0,0,1-28.12,28.95H407.21a289.004,289.004,0,0,1-28.12-28.95Z"
         transform="translate(-311 -161)"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></path>
       <path
         d="M632.28,536.07H567.36a3.17486,3.17486,0,0,0-1.03.16,3.448,3.448,0,0,0-2.43,3.3V642.09h71.85V539.53A3.46328,3.46328,0,0,0,632.28,536.07Zm-24.57,50.6a7.53127,7.53127,0,0,1-1.56,4.6,7.665,7.665,0,0,1-13.78-4.6v-11.9a7.67033,7.67033,0,0,1,15.34,0Z"
@@ -25,12 +23,12 @@ export const ProgrammerSVG = ({ theme }) => {
       <path
         d="M563.68,638.81v9.89a1.93971,1.93971,0,0,0,1.93,1.94h68.43a1.94622,1.94622,0,0,0,1.93-1.94v-9.89Z"
         transform="translate(-311 -161)"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></path>
       <path
         d="M739.78,376.02H462.28a9.01147,9.01147,0,0,0-9,8.99V572.27a9.0071,9.0071,0,0,0,9,9h277.5a9.00714,9.00714,0,0,0,9-9V385.01A9.01151,9.01151,0,0,0,739.78,376.02Z"
         transform="translate(-311 -161)"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></path>
       <path
         d="M737.46,382.52H464.59a4.82046,4.82046,0,0,0-4.81,4.82V569.96a4.81829,4.81829,0,0,0,4.81,4.81H737.46a4.81833,4.81833,0,0,0,4.81-4.81V387.34A4.8205,4.8205,0,0,0,737.46,382.52Z"
@@ -48,7 +46,7 @@ export const ProgrammerSVG = ({ theme }) => {
         width="5"
         height="3"
         rx="0.48819"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></rect>
       <rect
         x="224.643"
@@ -56,7 +54,7 @@ export const ProgrammerSVG = ({ theme }) => {
         width="5"
         height="3"
         rx="0.48819"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></rect>
       <rect
         x="234.643"
@@ -64,7 +62,7 @@ export const ProgrammerSVG = ({ theme }) => {
         width="5"
         height="3"
         rx="0.48819"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></rect>
       <rect
         x="244.643"
@@ -72,7 +70,7 @@ export const ProgrammerSVG = ({ theme }) => {
         width="5"
         height="3"
         rx="0.48819"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></rect>
       <rect
         x="254.643"
@@ -80,7 +78,7 @@ export const ProgrammerSVG = ({ theme }) => {
         width="5"
         height="3"
         rx="0.48819"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></rect>
       <rect
         x="264.643"
@@ -88,7 +86,7 @@ export const ProgrammerSVG = ({ theme }) => {
         width="5"
         height="3"
         rx="0.48819"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></rect>
       <rect
         x="274.643"
@@ -96,7 +94,7 @@ export const ProgrammerSVG = ({ theme }) => {
         width="5"
         height="3"
         rx="0.48819"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></rect>
       <rect
         x="284.643"
@@ -104,7 +102,7 @@ export const ProgrammerSVG = ({ theme }) => {
         width="5"
         height="3"
         rx="0.48819"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></rect>
       <rect
         x="294.643"
@@ -112,7 +110,7 @@ export const ProgrammerSVG = ({ theme }) => {
         width="5"
         height="3"
         rx="0.48819"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></rect>
       <rect
         x="304.643"
@@ -120,7 +118,7 @@ export const ProgrammerSVG = ({ theme }) => {
         width="5"
         height="3"
         rx="0.48819"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></rect>
       <rect
         x="314.643"
@@ -128,7 +126,7 @@ export const ProgrammerSVG = ({ theme }) => {
         width="5"
         height="3"
         rx="0.48819"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></rect>
       <rect
         x="324.643"
@@ -136,7 +134,7 @@ export const ProgrammerSVG = ({ theme }) => {
         width="5"
         height="3"
         rx="0.48819"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></rect>
       <rect
         x="334.643"
@@ -144,7 +142,7 @@ export const ProgrammerSVG = ({ theme }) => {
         width="5"
         height="3"
         rx="0.48819"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></rect>
       <rect
         x="344.643"
@@ -152,7 +150,7 @@ export const ProgrammerSVG = ({ theme }) => {
         width="5"
         height="3"
         rx="0.48819"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></rect>
       <rect
         x="354.643"
@@ -160,7 +158,7 @@ export const ProgrammerSVG = ({ theme }) => {
         width="5"
         height="3"
         rx="0.48819"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></rect>
       <rect
         x="364.643"
@@ -168,7 +166,7 @@ export const ProgrammerSVG = ({ theme }) => {
         width="5"
         height="3"
         rx="0.48819"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></rect>
       <rect
         x="214.52484"
@@ -176,7 +174,7 @@ export const ProgrammerSVG = ({ theme }) => {
         width="5"
         height="3"
         rx="0.48819"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></rect>
       <rect
         x="224.52484"
@@ -184,7 +182,7 @@ export const ProgrammerSVG = ({ theme }) => {
         width="5"
         height="3"
         rx="0.48819"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></rect>
       <rect
         x="234.52484"
@@ -192,7 +190,7 @@ export const ProgrammerSVG = ({ theme }) => {
         width="5"
         height="3"
         rx="0.48819"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></rect>
       <rect
         x="244.52484"
@@ -200,7 +198,7 @@ export const ProgrammerSVG = ({ theme }) => {
         width="5"
         height="3"
         rx="0.48819"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></rect>
       <rect
         x="254.52484"
@@ -208,7 +206,7 @@ export const ProgrammerSVG = ({ theme }) => {
         width="5"
         height="3"
         rx="0.48819"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></rect>
       <rect
         x="264.52484"
@@ -216,7 +214,7 @@ export const ProgrammerSVG = ({ theme }) => {
         width="5"
         height="3"
         rx="0.48819"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></rect>
       <rect
         x="274.52484"
@@ -224,7 +222,7 @@ export const ProgrammerSVG = ({ theme }) => {
         width="5"
         height="3"
         rx="0.48819"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></rect>
       <rect
         x="284.52484"
@@ -232,7 +230,7 @@ export const ProgrammerSVG = ({ theme }) => {
         width="5"
         height="3"
         rx="0.48819"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></rect>
       <rect
         x="294.52484"
@@ -240,7 +238,7 @@ export const ProgrammerSVG = ({ theme }) => {
         width="5"
         height="3"
         rx="0.48819"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></rect>
       <rect
         x="304.52484"
@@ -248,7 +246,7 @@ export const ProgrammerSVG = ({ theme }) => {
         width="5"
         height="3"
         rx="0.48819"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></rect>
       <rect
         x="314.52484"
@@ -256,7 +254,7 @@ export const ProgrammerSVG = ({ theme }) => {
         width="5"
         height="3"
         rx="0.48819"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></rect>
       <rect
         x="324.52484"
@@ -264,7 +262,7 @@ export const ProgrammerSVG = ({ theme }) => {
         width="5"
         height="3"
         rx="0.48819"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></rect>
       <rect
         x="334.52484"
@@ -272,7 +270,7 @@ export const ProgrammerSVG = ({ theme }) => {
         width="5"
         height="3"
         rx="0.48819"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></rect>
       <rect
         x="344.52484"
@@ -280,7 +278,7 @@ export const ProgrammerSVG = ({ theme }) => {
         width="5"
         height="3"
         rx="0.48819"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></rect>
       <rect
         x="354.52484"
@@ -288,7 +286,7 @@ export const ProgrammerSVG = ({ theme }) => {
         width="5"
         height="3"
         rx="0.48819"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></rect>
       <rect
         x="364.52484"
@@ -296,7 +294,7 @@ export const ProgrammerSVG = ({ theme }) => {
         width="5"
         height="3"
         rx="0.48819"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></rect>
       <rect
         x="262.52484"
@@ -304,48 +302,48 @@ export const ProgrammerSVG = ({ theme }) => {
         width="40"
         height="3"
         rx="0.48819"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></rect>
       <path
         d="M723.74813,407.67669H468.42477a1.01559,1.01559,0,0,1,0-2.03069H723.74813a1.01559,1.01559,0,0,1,0,2.03069Z"
         transform="translate(-311 -161)"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></path>
       <ellipse
         cx="174.80496"
         cy="233.3788"
         rx="5.95043"
         ry="6.08304"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></ellipse>
       <ellipse
         cx="195.36098"
         cy="233.3788"
         rx="5.95043"
         ry="6.08304"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></ellipse>
       <ellipse
         cx="215.917"
         cy="233.3788"
         rx="5.95043"
         ry="6.08304"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></ellipse>
       <path
         d="M711.37,389.8h-14.6a1.1053,1.1053,0,0,0,0,2.21h14.6a1.10511,1.10511,0,0,0,0-2.21Z"
         transform="translate(-311 -161)"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></path>
       <path
         d="M711.37,393.95h-14.6a1.10527,1.10527,0,0,0,0,2.21h14.6a1.10508,1.10508,0,0,0,0-2.21Z"
         transform="translate(-311 -161)"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></path>
       <path
         d="M711.37,398.1h-14.6a1.1053,1.1053,0,0,0,0,2.21h14.6a1.10511,1.10511,0,0,0,0-2.21Z"
         transform="translate(-311 -161)"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></path>
       <rect
         x="171.31411"
@@ -638,7 +636,7 @@ export const ProgrammerSVG = ({ theme }) => {
       <path
         d="M726.81,709.77c-.61.31-1.23.62-1.84.92-15.8,7.9-28.43994,12.39-45.73,17.31-1.46-16.3-2.87-44.95-4.24-62.71-.36-4.61-.72-8.48-1.07-11.21a15.1823,15.1823,0,0,0-.88-4.25l.06,4.25.15,11.21.87,64.11a288.58782,288.58782,0,0,1-65.84,9.49c-1.16.03-2.3.05-3.4.07-.39.01-.77.02-1.15.02-1.25.01-2.49.02-3.74.02a289.27116,289.27116,0,0,1-69.54-8.43c.49-16.13.98-44.46,1.45-65.28.1-4.07.19-7.86.29-11.21.19-7.16.39-12.32.58-14.05a4.36108,4.36108,0,0,0-.39.97,97.15388,97.15388,0,0,0-1.89,13.08c-.35,3.35-.7,7.14-1.05,11.21-1.86,21.63-3.8,51.04-5.8,63.51a285.47262,285.47262,0,0,1-34.97-12.03q-9-3.75-17.68-8.09c1.1-7.2,2.25-15.27,3.43-23.64.92-6.49,1.87-13.16,2.84-19.75,1.5-10.18,3.04-20.16,4.6-28.95,2.28-12.84,4.62-23.16,6.94-27.9,2.2-4.5,4.4-8.94,6.53-13.19.74-1.49,1.48-2.96,2.2-4.39.17-.34.34-.67.51-1,1.53-3.01,3.01-5.89,4.42-8.59,1.21-2.31,2.36005-4.49,3.45-6.5,2.64-4.88,4.88-8.77,6.54-11.23a55.25656,55.25656,0,0,1,29.28-22.21l.3-.08.21.09,20.45-6.28,2.99-.92,2.01-.62,7.08-5.39,3.85-2.93,3.61-2.75,7.06-5.37,43.71,2.69,8.51,20.49,19.06,6.97.33-.15.29-.12.3.08a55.306,55.306,0,0,1,29.28,22.21c.93994,1.41,2.08,3.27,3.37,5.52,1.1,1.91,2.3,4.09,3.6,6.5,1.85,3.43005,3.87,7.30005,6.01,11.49.47.92.95,1.86,1.43,2.81q1.335,2.63993,2.71,5.38995c2.13,4.25,4.33,8.69,6.53,13.2,1.91,3.91,3.84,11.95,5.74,22.18,1.57,8.5,3.13,18.52,4.64,28.95,1.98,13.52-.13,29.71,1.66,42.15C726.58,708.23,726.7,709,726.81,709.77Z"
         transform="translate(-311 -161)"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></path>
       <circle
         cx="289.61504"
@@ -673,7 +671,7 @@ export const ProgrammerSVG = ({ theme }) => {
       <path
         d="M467.34278,496.336c.37688,5.02535-8.22881,10.80427-19.75539,13.09716-10.58459,2.16714-20.06959.65944-22.73936-3.29777a6.02524,6.02524,0,0,1,1.72758-.69107l39.7621-8.98257A5.8541,5.8541,0,0,1,467.34278,496.336Z"
         transform="translate(-311 -161)"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></path>
       <path
         d="M439.84333,623.90524,462.177,612.73843l-18.6114-50.25079-4.90493-25.342a19.16137,19.16137,0,0,0-31.28219-10.90731h0a19.16136,19.16136,0,0,0-2.49251,26.51833l18.20719,22.75891Z"
@@ -683,7 +681,7 @@ export const ProgrammerSVG = ({ theme }) => {
       <path
         d="M462.177,603.43273l-29.77821,14.889,22.59854,70.80908A30.9768,30.9768,0,0,0,477.333,709.84721h0a30.97681,30.97681,0,0,0,33.73743-14.197l59.92487-102.71393a31.62026,31.62026,0,0,0-10.19564-42.982h0a31.62037,31.62037,0,0,0-45.29613,12.76511l-36.576,77.93632Z"
         transform="translate(-311 -161)"
-        fill={ theme.palette.primary.dark }
+        fill={theme.palette.primary.dark}
       ></path>
       <path
         d="M452.9668,539.44141a.49632.49632,0,0,1-.1626-.02735l-6.50147-2.23828a.49923.49923,0,0,1-.20556-.81055l4.83545-5.26464a.49972.49972,0,1,1,.73633.67578l-4.31885,4.70215,5.77929,1.99023a.49991.49991,0,0,1-.16259.97266Z"

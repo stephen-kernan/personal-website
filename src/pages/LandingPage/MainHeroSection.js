@@ -1,9 +1,9 @@
-import { Button, Grid, Link, Typography } from "@mui/material";
+import { Button, Link, Typography } from "@mui/material";
 import React from "react";
 
-import "./heroSection.css";
+import "./landingPage.css";
 
-export const HeroSection = ({
+export const MainHeroSection = ({
   huge = false,
   float,
   image,
@@ -19,11 +19,11 @@ export const HeroSection = ({
 
   return (
     <div
-      className={`hero-section__grid ${float ? float : ""} ${
+      className={`main-hero-section__grid ${float ? float : ""} ${
         huge ? "huge" : ""
       }`}
     >
-      <div className="hero-section__title">
+      <div className="main-hero-section__title">
         <Typography
           variant={huge ? "huge" : "semiHuge"}
           component="h1"
@@ -32,12 +32,12 @@ export const HeroSection = ({
           {headerText}
         </Typography>
       </div>
-      <div className="hero-section__paragraph">
+      <div className="main-hero-section__paragraph">
         <Typography variant="body1" component="p" sx={{ maxWidth: "80ch" }}>
           {paragraphText}
         </Typography>
       </div>
-      <div className="hero-section__button">
+      <div className="main-hero-section__button">
         {buttonLabel && (
           <Link
             href={buttonLink}
@@ -54,7 +54,7 @@ export const HeroSection = ({
           </Link>
         )}
       </div>
-      {image ? <div className="hero-section__image">{image}</div> : null}
+      {image ? <div className="main-hero-section__image">{image}</div> : null}
     </div>
   );
 };

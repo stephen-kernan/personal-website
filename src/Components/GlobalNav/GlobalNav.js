@@ -164,18 +164,8 @@ export const GlobalNav = ({ changeTheme, toggleDarkMode }) => {
             defaultChecked={isDarkMode}
             onClick={toggleDarkMode}
           />
-          <IconButton onClick={toggleSettingsModal}>
-            <SettingsIcon sx={{ color: "bakugoLight" }} />
-          </IconButton>
         </div>
       </Toolbar>
-
-      {modal === "settings" && (
-        <SettingsModal
-          changeTheme={changeTheme}
-          onClose={toggleSettingsModal}
-        />
-      )}
     </AppBar>
   );
 };

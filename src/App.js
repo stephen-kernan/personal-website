@@ -17,6 +17,7 @@ const dabi = "#20c1fe";
 const deku = "#5dbfa2";
 const leMillion = "#f8d996";
 const shoto = "#b63c59";
+const newColor = "#9EBCEA";
 const colorHexes = {
   bakugoLight,
   eraserHead,
@@ -50,14 +51,24 @@ export const App = () => {
         paper: background,
       },
       primary: {
-        main: color,
+        main: newColor,
       },
     },
     typography: {
-      fontFamily: "'Poppins', sans-serif",
+      fontFamily: "'Sora', sans-serif",
       h1: {
         fontSize: "3rem",
-        fontWeight: 600,
+        fontWeight: 900,
+      },
+      huge: {
+        fontSize: "clamp(3.5rem, 14vw, 9rem)",
+        lineHeight: "clamp(3.5rem, 14vw, 9rem)",
+        fontWeight: 900,
+      },
+      semiHuge: {
+        fontSize: "clamp(2rem, 10vw, 6rem)",
+        lineHeight: "clamp(2rem, 10vw, 6rem)",
+        fontWeight: 900,
       },
       h2: {
         fontSize: "2rem",
@@ -72,9 +83,12 @@ export const App = () => {
         fontWeight: 600,
       },
       body1: {
+        fontFamily: "'Epilogue', 'Sora', sans-serif",
+        fontSize: "clamp(1rem, 4vw, 1.25rem)",
         lineHeight: "1.75em",
       },
       body2: {
+        fontFamily: "'Sora', 'Epilogue', sans-serif",
         fontSize: "1.25rem",
       },
     },

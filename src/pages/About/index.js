@@ -9,7 +9,7 @@ export const About = () => {
   return (
     <div className="page-container">
       <Container maxWidth="lg" className="content-container">
-        <Typography variant="huge" component="h1" color="primary">
+        <Typography variant="semiHuge" component="h1" color="primary">
           About Me
         </Typography>
 
@@ -17,7 +17,7 @@ export const About = () => {
         <Grid container spacing={0} className="about-me__category-container">
           <Grid item xs={9}>
             <Typography
-              variant="semiHuge"
+              variant="h2"
               component="h2"
               color="primary"
               className="sub-header"
@@ -60,7 +60,7 @@ export const About = () => {
         <Grid container spacing={0} className="about-me__category-container">
           <Grid item xs={9}>
             <Typography
-              variant="semiHuge"
+              variant="h2"
               component="h2"
               color="primary"
               className="sub-header"

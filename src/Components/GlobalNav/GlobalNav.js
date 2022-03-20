@@ -1,7 +1,9 @@
 import {
   AppBar,
   Box,
+  Divider,
   Drawer,
+  FormControlLabel,
   IconButton,
   Link,
   Switch,
@@ -14,8 +16,70 @@ import React, { useState } from "react";
 import { useLocation } from "react-router";
 
 import "./globalNav.css";
+import { styled } from "@mui/system";
 
-export const MobileDrawer = ({ links, activeLink }) => {
+const NightModeSwitch = ({ mobile, onClick, checked = true }) => {
+  const StyledSwitch = styled(Switch)(({ theme }) => ({
+    width: 62,
+    height: 34,
+    marginTop: mobile ? "1rem" : 0,
+    marginLeft: mobile ? "0 !important" : "1em",
+    padding: 12,
+    "& .MuiSwitch-switchBase": {
+      margin: 1,
+      top: "2px",
+      padding: 0,
+      // transform: "translateX(0px)",
+      "&.Mui-checked": {
+        color: "#fff",
+        transform: "translateX(30px)",
+        "& .MuiSwitch-thumb:before": {
+          content: "'🌙'",
+        },
+        "& + .MuiSwitch-track": {
+          opacity: 1,
+          backgroundColor:
+            theme.palette.mode === "dark" ? "#8796A5" : "#aab4be",
+        },
+      },
+    },
+    "& .MuiSwitch-thumb": {
+      backgroundColor: theme.palette.eraserHead,
+      border: `3px solid ${theme.palette.primary.main}`,
+      width: 27,
+      height: 27,
+      "&:before": {
+        content: "'☀️'",
+        position: "absolute",
+        width: "24px",
+        height: "24px",
+        fontSize: "0.75rem",
+        left: 6,
+        top: mobile ? 0 : -2,
+      },
+    },
+    "& .MuiSwitch-track": {
+      opacity: 1,
+      backgroundColor: "eraserHead",
+      borderRadius: 20 / 2,
+    },
+  }));
+
+  return (
+    <FormControlLabel
+      control={<StyledSwitch sx={{ m: 1 }} checked={checked} />}
+      label=""
+      onClick={onClick}
+    />
+  );
+};
+
+export const MobileDrawer = ({
+  links,
+  activeLink,
+  isDarkMode,
+  toggleDarkMode,
+}) => {
   const theme = useTheme();
 
   return (
@@ -30,7 +94,13 @@ export const MobileDrawer = ({ links, activeLink }) => {
       }}
     >
       {links.map((link) => (
-        <Link href={link.path} underline="none">
+        <Link
+          href={link.path}
+          underline="none"
+          sx={{
+            marginBottom: "1rem",
+          }}
+        >
           <Typography
             variant="body2"
             component="a"
@@ -48,11 +118,20 @@ export const MobileDrawer = ({ links, activeLink }) => {
           </Typography>
         </Link>
       ))}
+      <Divider variant="middle" sx={{ marginTop: "2rem" }} />
+      <NightModeSwitch mobile onClick={toggleDarkMode} checked={isDarkMode} />
     </Box>
   );
 };
 
-const MobileNav = ({ links, activeLink, open, toggleMenu }) => {
+const MobileNav = ({
+  links,
+  activeLink,
+  isDarkMode,
+  open,
+  toggleMenu,
+  toggleDarkMode,
+}) => {
   return (
     <div>
       <IconButton id="openmenu" onClick={toggleMenu}>
@@ -61,10 +140,10 @@ const MobileNav = ({ links, activeLink, open, toggleMenu }) => {
       <Drawer
         anchor="left"
         sx={{
-          width: "max(40%, 150px)",
+          width: "max(50%, 180px)",
           flexShrink: 0,
           "& .MuiDrawer-paper": {
-            width: "max(40%, 150px)",
+            width: "max(50%, 180px)",
             boxSizing: "border-box",
           },
         }}
@@ -72,7 +151,12 @@ const MobileNav = ({ links, activeLink, open, toggleMenu }) => {
         variant="temporary"
         onClose={toggleMenu}
       >
-        <MobileDrawer links={links} activeLink={activeLink} />
+        <MobileDrawer
+          activeLink={activeLink}
+          links={links}
+          isDarkMode={isDarkMode}
+          toggleDarkMode={toggleDarkMode}
+        />
       </Drawer>
     </div>
   );
@@ -109,10 +193,12 @@ export const GlobalNav = ({ toggleDarkMode }) => {
       <Toolbar className="global-nav__container" sx={{ bgcolor: "eraserHead" }}>
         <Box sx={{ display: { xs: "flex", md: "none" } }}>
           <MobileNav
-            links={links}
             activeLink={activeLink}
+            isDarkMode={isDarkMode}
+            links={links}
             open={displayMenu}
             toggleMenu={toggleMenu}
+            toggleDarkMode={toggleDarkMode}
           />
         </Box>
         <Link href="/" underline="none">
@@ -151,13 +237,12 @@ export const GlobalNav = ({ toggleDarkMode }) => {
           ))}
         </Box>
 
-        <div className="global-nav__settings">
-          <Switch
-            inputProps={{ "aria-label": "dark-mode" }}
-            defaultChecked={isDarkMode}
-            onClick={toggleDarkMode}
-          />
-        </div>
+        <Box
+          className="global-nav__settings"
+          sx={{ visibility: { xs: "hidden", md: "visible" } }}
+        >
+          <NightModeSwitch onClick={toggleDarkMode} checked={isDarkMode} />
+        </Box>
       </Toolbar>
     </AppBar>
   );

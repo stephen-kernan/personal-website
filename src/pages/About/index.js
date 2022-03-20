@@ -19,25 +19,33 @@ export const About = () => {
               Current Hobbies
             </Typography>
             <Typography variant="body1" component="p">
-              <strong>Anime</strong> - Jujutsu Kaisen
+              <strong>Anime</strong> - My Hero Academia
             </Typography>
             <Typography variant="body1" component="p">
-              <strong>TV Show</strong> - Avatar The Last Airbender
+              <strong>TV Show</strong> - American Crime Story: Impeachment
             </Typography>
             <Typography variant="body1" component="p">
-              <strong>Book</strong> - Dune
+              <strong>Book</strong> - House in the Cerulean Sea
             </Typography>
             <Typography variant="body1" component="p">
-              <strong>Next Movie</strong> - Eternals
+              <strong>Next Movie</strong> - Jujutsu Kaisen 0
             </Typography>
             <Typography variant="body1" component="p">
               <strong>Learning</strong> - Piano / Material UI
             </Typography>
             <Typography variant="body1" component="p">
-              <strong>Video Games</strong> - Angry Birds 2 (don't judge)
+              <strong>Video Games</strong> - Hades
             </Typography>
           </Grid>
-          <Grid item xs={3} sx={{ display: "flex", alignItems: "flex-start" }}>
+          <Grid
+            item
+            xs={3}
+            sx={{
+              display: "flex",
+              alignItems: "flex-start",
+              visibility: { xs: "hidden", md: "visible" },
+            }}
+          >
             <HobbiesSVG theme={theme} />
           </Grid>
         </Grid>
@@ -74,7 +82,15 @@ export const About = () => {
               <Link href="https://amzn.to/3BWIwLM">Blue Yeti Microphone</Link>
             </Typography>
           </Grid>
-          <Grid item xs={3} sx={{ display: "flex", alignItems: "flex-start" }}>
+          <Grid
+            item
+            xs={3}
+            sx={{
+              display: "flex",
+              alignItems: "flex-start",
+              visibility: { xs: "hidden", md: "visible" },
+            }}
+          >
             <EquipmentSVG theme={theme} />
           </Grid>
         </Grid>

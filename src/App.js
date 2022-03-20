@@ -34,6 +34,7 @@ let primary = selectedColor ? colorHexes[selectedColor] : deku;
 export const App = () => {
   const isDarkMode = localStorage.getItem("darkMode") === "true";
   let background = isDarkMode ? eraserHead : bakugoLight;
+  // eslint-disable-next-line no-unused-vars
   const [color, setColor] = useState(primary);
   const [darkMode, setDarkMode] = useState(isDarkMode);
 

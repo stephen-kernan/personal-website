@@ -9,13 +9,11 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
-import SettingsIcon from "@mui/icons-material/Settings";
 import MenuIcon from "@mui/icons-material/Menu";
 import React, { useState } from "react";
 import { useLocation } from "react-router";
 
 import "./globalNav.css";
-import { SettingsModal } from "../SettingsModal/SettingsModal";
 
 export const MobileDrawer = ({ links, activeLink }) => {
   const theme = useTheme();
@@ -80,8 +78,7 @@ const MobileNav = ({ links, activeLink, open, toggleMenu }) => {
   );
 };
 
-export const GlobalNav = ({ changeTheme, toggleDarkMode }) => {
-  const [modal, setModal] = useState(null);
+export const GlobalNav = ({ toggleDarkMode }) => {
   const [displayMenu, setDisplayMenu] = useState(false);
   const location = useLocation();
   const theme = useTheme();
@@ -102,10 +99,6 @@ export const GlobalNav = ({ changeTheme, toggleDarkMode }) => {
     //   path: "/projects",
     // },
   ];
-
-  const toggleSettingsModal = () => {
-    setModal(modal ? null : "settings");
-  };
 
   const toggleMenu = () => {
     setDisplayMenu(!displayMenu);

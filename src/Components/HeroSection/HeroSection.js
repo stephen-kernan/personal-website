@@ -1,4 +1,4 @@
-import { Button, Grid, Link, Typography } from "@mui/material";
+import { Button, Link, Typography } from "@mui/material";
 import React from "react";
 
 import "./heroSection.css";

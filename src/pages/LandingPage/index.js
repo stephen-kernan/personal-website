@@ -1,4 +1,4 @@
-import { Container, Grid } from "@mui/material";
+import { Container } from "@mui/material";
 import { Box, useTheme } from "@mui/system";
 import React from "react";
 import { HeroSection } from "../../Components/HeroSection/HeroSection";

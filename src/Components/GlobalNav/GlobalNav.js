@@ -55,7 +55,7 @@ const NightModeSwitch = ({ mobile, onClick, checked = true }) => {
         height: "24px",
         fontSize: "0.75rem",
         left: 6,
-        top: mobile ? 0 : -2,
+        top: mobile ? 1 : -2,
       },
     },
     "& .MuiSwitch-track": {

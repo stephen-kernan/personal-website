@@ -2,20 +2,26 @@ import { Container, Grid, Link, Typography, useTheme } from "@mui/material";
 import React from "react";
 import { EquipmentSVG } from "../../Components/SVGs/EquipmentSVG";
 import { HobbiesSVG } from "../../Components/SVGs/HobbiesSVG";
+import "./about.css";
 
 export const About = () => {
   const theme = useTheme();
   return (
     <div className="page-container">
-      <Container maxWidth="lg">
-        <Typography variant="h1" component="h1" color="primary">
+      <Container maxWidth="lg" className="content-container">
+        <Typography variant="huge" component="h1" color="primary">
           About Me
         </Typography>
 
         {/* CURRENT HOBBIES */}
-        <Grid container spacing={0}>
+        <Grid container spacing={0} className="about-me__category-container">
           <Grid item xs={9}>
-            <Typography variant="h2" component="h2" color="primary">
+            <Typography
+              variant="semiHuge"
+              component="h2"
+              color="primary"
+              className="sub-header"
+            >
               Current Hobbies
             </Typography>
             <Typography variant="body1" component="p">
@@ -51,9 +57,14 @@ export const About = () => {
         </Grid>
 
         {/* EQUIPMENT */}
-        <Grid container spacing={0}>
+        <Grid container spacing={0} className="about-me__category-container">
           <Grid item xs={9}>
-            <Typography variant="h2" component="h2" color="primary">
+            <Typography
+              variant="semiHuge"
+              component="h2"
+              color="primary"
+              className="sub-header"
+            >
               My Equipment
             </Typography>
             <Typography variant="body1" component="p">

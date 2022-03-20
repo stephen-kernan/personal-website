@@ -18,6 +18,7 @@ const deku = "#5dbfa2";
 const leMillion = "#f8d996";
 const shoto = "#b63c59";
 const newColor = "#9EBCEA";
+const accentColor = "#EADE9E";
 const colorHexes = {
   bakugoLight,
   eraserHead,
@@ -27,6 +28,7 @@ const colorHexes = {
   deku,
   leMillion,
   shoto,
+  accentColor,
 };
 const selectedColor = localStorage.getItem("themeColor");
 let primary = selectedColor ? colorHexes[selectedColor] : deku;
@@ -73,7 +75,7 @@ export const App = () => {
       },
       h2: {
         fontSize: "2rem",
-        fontWeight: 600,
+        fontWeight: 900,
       },
       h3: {
         fontSize: "1.5rem",

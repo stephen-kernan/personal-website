@@ -44,6 +44,10 @@
   color: #f3f2f1 !important;
 }
 
+.sub-header {
+  margin-bottom: 2rem !important;
+}
+
 .page-nav {
   background-color: #373638 !important;
 }
@@ -53,6 +57,10 @@
   margin-inline: auto;
   margin-top: min(1em, 10vh);
   padding-bottom: max(10em, 10vh);
+}
+
+.content-container {
+  margin-block: 5em;
 }
 
 .landing-page {

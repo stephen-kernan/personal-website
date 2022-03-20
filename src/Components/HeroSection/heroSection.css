@@ -53,13 +53,13 @@
     grid-template-rows: repeat(autofill, min(8rem, 10vh));
     align-items: start;
     grid-template-areas:
-      "hero-section__title hero-section__title"
+      "hero-section__image hero-section__title"
       "hero-section__image hero-section__paragraph"
       "hero-section__image hero-section__button"
       "hero-section__image .";
   }
 
   .hero-section__grid.left .hero-section__title {
-    text-align: right;
+    text-align: left;
   }
 }

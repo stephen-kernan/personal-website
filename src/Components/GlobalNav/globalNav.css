@@ -18,7 +18,7 @@
 
 .global-nav__container {
   display: flex;
-  justify-content: space-between !important;
+  justify-content: start !important;
 }
 
 .global-nav__middle-section {
@@ -29,7 +29,6 @@
 
 .global-nav__settings {
   display: flex;
-  gap: 0.5rem;
   justify-content: flex-end;
   align-items: center;
 }
@@ -47,4 +46,10 @@
 #theme-select {
   display: flex !important;
   align-items: center !important;
+}
+
+@media screen and (min-width: 900px) {
+  .global-nav__container {
+    justify-content: space-between !important;
+  }
 }

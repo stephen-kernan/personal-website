@@ -2,12 +2,19 @@ import { Container, Grid, Link, Typography, useTheme } from "@mui/material";
 import React from "react";
 import { EquipmentSVG } from "../../Components/SVGs/EquipmentSVG";
 import { HobbiesSVG } from "../../Components/SVGs/HobbiesSVG";
+import { SEO } from "../../Components/SEO/SEO";
 import "./about.css";
+
+const pageTitle = "About Me – Stephen Kernan";
+const description =
+  "I'm a software engineer living in Saint Louis, MO. Here, you can learn more about me and see the equipment I use to help with my work as a full-time software engineer.";
 
 export const About = () => {
   const theme = useTheme();
   return (
     <div className="page-container">
+      <SEO pageTitle={pageTitle} description={description} />
+
       <Container maxWidth="lg" className="content-container">
         <Typography variant="semiHuge" component="h1" color="primary">
           About Me

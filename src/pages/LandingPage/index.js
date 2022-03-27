@@ -2,10 +2,15 @@ import { Container } from "@mui/material";
 import { Box, useTheme } from "@mui/system";
 import React from "react";
 import { HeroSection } from "../../Components/HeroSection/HeroSection";
+import { SEO } from "../../Components/SEO/SEO";
 import { ProgrammerSVG } from "../../Components/SVGs/ProgrammerSVG";
 import profileImage from "../../images/profile-pic-edited.png";
 import "./landingPage.css";
 import { MainHeroSection } from "./MainHeroSection";
+
+const pageTitle = "Stephen Kernan";
+const description =
+  "I’m a software engineer living in Saint Louis, MO. I am passionate about learning and my goal is to share what I’ve learned in order to grow and to help others improve. Welcome to my personal website, where I keep my personal projects as well as a record of the things I’m learning.";
 
 export const ProfileSVG = ({ theme }) => {
   return (
@@ -68,6 +73,8 @@ export const LandingPage = () => {
     location.hostname === "localhost" ? location.host : location.hostname;
   return (
     <div className="page-container">
+      <SEO pageTitle={pageTitle} description={description} />
+
       <Container maxWidth="xl">
         <MainHeroSection
           huge

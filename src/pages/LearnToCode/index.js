@@ -1,9 +1,17 @@
 import { Container, Link, Typography } from "@mui/material";
 import React from "react";
+import { SEO } from "../../Components/SEO/SEO";
+
+const pageTitle =
+  "Learn to Code: Strategies for Getting Started – Stephen Kernan";
+const description =
+  "Anyone can learn to code. Like any skill, it just takes time and practice. That said, teaching oneself to code can be daunting. There are so many places one can start and an infinite number of paths from there. This guide is a starting point for anyone interested in learning. It consists of tips and tricks for getting started, as well as the free resources that I used as I taught myself to code.";
 
 export const LearnToCode = () => {
   return (
     <div className="page-container">
+      <SEO pageTitle={pageTitle} description={description} />
+
       <Container maxWidth="lg" className="content-container">
         <Typography
           variant="semiHuge"

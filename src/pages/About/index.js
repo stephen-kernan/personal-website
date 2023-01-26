@@ -5,7 +5,7 @@ import { HobbiesSVG } from "../../Components/SVGs/HobbiesSVG";
 import { SEO } from "../../Components/SEO/SEO";
 import "./about.css";
 
-const pageTitle = "About Me – Stephen Kernan";
+const pageTitle = "About Me";
 const description =
   "I'm a software engineer living in Saint Louis, MO. Here, you can learn more about me and see the equipment I use to help with my work as a full-time software engineer.";
 
@@ -22,7 +22,7 @@ export const About = () => {
 
         {/* CURRENT HOBBIES */}
         <Grid container spacing={0} className="about-me__category-container">
-          <Grid item xs={9}>
+          <Grid item s={9}>
             <Typography
               variant="h2"
               component="h2"
@@ -32,22 +32,25 @@ export const About = () => {
               Current Hobbies
             </Typography>
             <Typography variant="body1" component="p">
-              <strong>Anime</strong> - My Hero Academia
+              <strong>Anime</strong> - Mob Psycho 100 (Season 3)
             </Typography>
             <Typography variant="body1" component="p">
-              <strong>TV Show</strong> - American Crime Story: Impeachment
+              <strong>TV Show</strong> - Abbott Elementary
             </Typography>
             <Typography variant="body1" component="p">
-              <strong>Book</strong> - House in the Cerulean Sea
+              <strong>Book</strong> - Atomic Habits
             </Typography>
             <Typography variant="body1" component="p">
-              <strong>Next Movie</strong> - Jujutsu Kaisen 0
+              <strong>Most Recent Movie</strong> - M3GAN
             </Typography>
             <Typography variant="body1" component="p">
-              <strong>Learning</strong> - Piano / Material UI
+              <strong>Next Movie</strong> - Knock at the Cabin
             </Typography>
             <Typography variant="body1" component="p">
-              <strong>Video Games</strong> - Hades
+              <strong>Learning</strong> - Webflow
+            </Typography>
+            <Typography variant="body1" component="p">
+              <strong>Current Video Game</strong> - Cult of the Lamb
             </Typography>
           </Grid>
           <Grid
@@ -65,7 +68,7 @@ export const About = () => {
 
         {/* EQUIPMENT */}
         <Grid container spacing={0} className="about-me__category-container">
-          <Grid item xs={9}>
+          <Grid item s={9}>
             <Typography
               variant="h2"
               component="h2"

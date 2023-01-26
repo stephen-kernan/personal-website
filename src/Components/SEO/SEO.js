@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 export const SEO = ({ pageTitle, description }) => {
   return (
     <Helmet
-      title={pageTitle}
+      title={`${pageTitle} | Stephen Kernan`}
       meta={[
         {
           name: "description",
@@ -11,7 +11,7 @@ export const SEO = ({ pageTitle, description }) => {
         },
         {
           property: "og:title",
-          content: pageTitle,
+          content: `${pageTitle} | Stephen Kernan`,
         },
         {
           property: "og:description",
@@ -27,7 +27,7 @@ export const SEO = ({ pageTitle, description }) => {
         },
         {
           property: "twitter:title",
-          content: pageTitle,
+          content: `${pageTitle} | Stephen Kernan`,
         },
         {
           property: "twitter:description",

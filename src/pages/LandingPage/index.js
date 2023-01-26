@@ -8,7 +8,7 @@ import profileImage from "../../images/profile-pic-edited.png";
 import "./landingPage.css";
 import { MainHeroSection } from "./MainHeroSection";
 
-const pageTitle = "Stephen Kernan";
+const pageTitle = "Welcome";
 const description =
   "I’m a software engineer living in Saint Louis, MO. I am passionate about learning and my goal is to share what I’ve learned in order to grow and to help others improve. Welcome to my personal website, where I keep my personal projects as well as a record of the things I’m learning.";
 
@@ -75,7 +75,7 @@ export const LandingPage = () => {
     <div className="page-container">
       <SEO pageTitle={pageTitle} description={description} />
 
-      <Container maxWidth="xl">
+      <Container maxWidth="lg" className="content-container">
         <MainHeroSection
           huge
           float="right"

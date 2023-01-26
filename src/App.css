@@ -50,6 +50,12 @@
 
 .page-nav {
   background-color: #373638 !important;
+  background-image: none !important;
+  margin: 0;
+}
+
+.global-nav__container {
+  max-width: 1200px !important;
 }
 
 .page-container {
@@ -61,14 +67,11 @@
 
 .content-container {
   margin-block: 5em;
+  padding-inline: 0 !important;
 }
 
 .landing-page {
   padding: 3em;
-}
-
-.page-nav {
-  margin: 0;
 }
 
 li a {

@@ -17,20 +17,24 @@
 }
 
 .global-nav__container {
+  width: min(95%, 1500px);
+  margin-inline: auto;
   display: flex;
   justify-content: start !important;
+  padding-inline: 0 !important;
 }
 
 .global-nav__middle-section {
   display: flex;
   gap: 1rem !important;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .global-nav__settings {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  width: 0;
 }
 
 .settings-modal__box {
@@ -50,6 +54,11 @@
 
 @media screen and (min-width: 900px) {
   .global-nav__container {
-    justify-content: space-between !important;
+    display: grid;
+    grid-template-columns: repeat(3, 33%) !important;
+  }
+
+  .global-nav__container > * {
+    width: 100%;
   }
 }

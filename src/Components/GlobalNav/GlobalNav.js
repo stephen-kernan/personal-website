@@ -3,10 +3,8 @@ import {
   Box,
   Divider,
   Drawer,
-  FormControlLabel,
   IconButton,
   Link,
-  Switch,
   Toolbar,
   Typography,
   useTheme,
@@ -16,69 +14,10 @@ import React, { useState } from "react";
 import { useLocation } from "react-router";
 
 import "./globalNav.css";
-import { styled } from "@mui/system";
-
-const NightModeSwitch = ({ mobile, onClick, checked = true }) => {
-  const StyledSwitch = styled(Switch)(({ theme }) => ({
-    width: 62,
-    height: 34,
-    marginTop: mobile ? "1rem" : 0,
-    marginLeft: mobile ? "0 !important" : "1em",
-    padding: 12,
-    "& .MuiSwitch-switchBase": {
-      margin: 1,
-      top: "2px",
-      padding: 0,
-      // transform: "translateX(0px)",
-      "&.Mui-checked": {
-        color: "#fff",
-        transform: "translateX(30px)",
-        "& .MuiSwitch-thumb:before": {
-          content: "'🌙'",
-        },
-        "& + .MuiSwitch-track": {
-          opacity: 1,
-          backgroundColor:
-            theme.palette.mode === "dark" ? "#8796A5" : "#aab4be",
-        },
-      },
-    },
-    "& .MuiSwitch-thumb": {
-      backgroundColor: theme.palette.eraserHead,
-      border: `3px solid ${theme.palette.primary.main}`,
-      width: 27,
-      height: 27,
-      "&:before": {
-        content: "'☀️'",
-        position: "absolute",
-        width: "24px",
-        height: "24px",
-        fontSize: "0.75rem",
-        left: 6,
-        top: mobile ? 1 : -2,
-      },
-    },
-    "& .MuiSwitch-track": {
-      opacity: 1,
-      backgroundColor: "eraserHead",
-      borderRadius: 20 / 2,
-    },
-  }));
-
-  return (
-    <FormControlLabel
-      control={<StyledSwitch sx={{ m: 1 }} checked={checked} />}
-      label=""
-      onClick={onClick}
-    />
-  );
-};
 
 export const MobileDrawer = ({
   links,
   activeLink,
-  isDarkMode,
-  toggleDarkMode,
 }) => {
   const theme = useTheme();
 
@@ -119,7 +58,6 @@ export const MobileDrawer = ({
         </Link>
       ))}
       <Divider variant="middle" sx={{ marginTop: "2rem" }} />
-      <NightModeSwitch mobile onClick={toggleDarkMode} checked={isDarkMode} />
     </Box>
   );
 };
@@ -191,7 +129,7 @@ export const GlobalNav = ({ toggleDarkMode }) => {
   return (
     <AppBar position="static" className="page-nav global-nav">
       <Toolbar className="global-nav__container" sx={{ bgcolor: "eraserHead" }}>
-        <Box sx={{ display: { xs: "flex", md: "none" } }}>
+        <Box sx={{ display: { xs: "flex", md: "none" }, width: "min-content" }}>
           <MobileNav
             activeLink={activeLink}
             isDarkMode={isDarkMode}
@@ -235,13 +173,6 @@ export const GlobalNav = ({ toggleDarkMode }) => {
               </Typography>
             </Link>
           ))}
-        </Box>
-
-        <Box
-          className="global-nav__settings"
-          sx={{ visibility: { xs: "hidden", md: "visible" } }}
-        >
-          <NightModeSwitch onClick={toggleDarkMode} checked={isDarkMode} />
         </Box>
       </Toolbar>
     </AppBar>

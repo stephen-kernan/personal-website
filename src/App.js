@@ -7,40 +7,41 @@ import { LandingPage } from "./pages/LandingPage";
 import { PageRoute } from "./PageRoute";
 import { About } from "./pages/About";
 import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
-import { LearnToCode } from "./pages/LearnToCode";
+import { Blog } from "./pages/Blog/Blog";
+import { BlogPost } from "./pages/Blog/BlogPost";
 
 const bakugoLight = "#f3f2f1";
 const eraserHead = "#373638";
-const bakugo = "#d7d3d0";
-const shinso = "#6365a6";
-const dabi = "#20c1fe";
-const deku = "#5dbfa2";
-const leMillion = "#f8d996";
-const shoto = "#b63c59";
+
 const newColor = "#9EBCEA";
-const accentColor = "#EADE9E";
+const playerOne = "#9EBCEA";
+const playerTwo = "#EA9E9E";
+const playerThree = "#F8D996";
+const playerFour = "#8DDBE0";
+
 const colorHexes = {
   bakugoLight,
   eraserHead,
-  bakugo,
-  shinso,
-  dabi,
-  deku,
-  leMillion,
-  shoto,
-  accentColor,
+  newColor,
+  playerOne,
+  playerTwo,
+  playerThree,
+  playerFour,
 };
 const selectedColor = localStorage.getItem("themeColor");
-let primary = selectedColor ? colorHexes[selectedColor] : deku;
+let primary = selectedColor ? colorHexes[selectedColor] : playerOne;
 
 export const App = () => {
-  const isDarkMode = localStorage.getItem("darkMode") === "true";
+  const isDarkMode =
+    localStorage.getItem("darkMode") === "true" ||
+    !localStorage.getItem("darkMode");
   let background = isDarkMode ? eraserHead : bakugoLight;
   // eslint-disable-next-line no-unused-vars
   const [color, setColor] = useState(primary);
   const [darkMode, setDarkMode] = useState(isDarkMode);
 
   const mhaTheme = createTheme({
+    ...colorHexes,
     palette: {
       mode: "light",
       ...colorHexes,
@@ -122,7 +123,7 @@ export const App = () => {
   };
 
   return (
-    <ThemeProvider theme={darkMode ? darkModeAdditions : mhaTheme}>
+    <ThemeProvider theme={darkModeAdditions}>
       <CssBaseline />
       <BrowserRouter>
         <Switch>
@@ -143,10 +144,11 @@ export const App = () => {
           <PageRoute
             path="/blog"
             exact
-            component={LearnToCode}
+            component={Blog}
             changeTheme={changeTheme}
             toggleDarkMode={toggleDarkMode}
           />
+          <PageRoute path="/blog/:title" exact component={BlogPost} />
         </Switch>
       </BrowserRouter>
     </ThemeProvider>

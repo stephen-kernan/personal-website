@@ -84,6 +84,11 @@ ol > span {
   margin: 1.25em auto;
 }
 
+h1,
+h2 {
+  color: #5dbfa2;
+}
+
 li {
   margin: 0.5em auto;
 }

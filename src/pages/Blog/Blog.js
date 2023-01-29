@@ -10,10 +10,6 @@ const categories = [
     url: "/learn-to-code",
     title: "Learning to Code",
   },
-  {
-    url: "/prop-constructor-pattern",
-    title: "The Prop Constructor Pattern: Simple, Clean Tests in React",
-  },
 ];
 
 export const Blog = ({ description }) => {

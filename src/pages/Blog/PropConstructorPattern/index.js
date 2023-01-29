@@ -525,7 +525,11 @@ export const PropConstructorPattern = () => {
 
         <Typography variant="body1" component="p">
           Full code for the <code>Button</code> can be found{" "}
-          <a href="https://github.com/stephen-kernan/code-examples/blob/main/jest/propConstructorPattern/components/Button.js">
+          <a
+            href="https://github.com/stephen-kernan/code-examples/blob/main/jest/propConstructorPattern/components/Button.js"
+            target="_blank"
+            rel="noreferrer"
+          >
             here
           </a>
           .
@@ -533,7 +537,11 @@ export const PropConstructorPattern = () => {
 
         <Typography variant="body1" component="p">
           Full code for the tests can be found{" "}
-          <a href="https://github.com/stephen-kernan/code-examples/blob/main/jest/propConstructorPattern/tests/Button.test.js">
+          <a
+            href="https://github.com/stephen-kernan/code-examples/blob/main/jest/propConstructorPattern/tests/Button.test.js"
+            target="_blank"
+            rel="noreferrer"
+          >
             here
           </a>
           .

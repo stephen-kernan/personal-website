@@ -89,3 +89,8 @@ button {
 .callout.error {
   border-left: 0.25rem solid var(--playerFour);
 }
+
+a {
+  color: var(--playerOne);
+  font-weight: 700;
+}

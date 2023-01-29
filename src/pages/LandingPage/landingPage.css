@@ -28,6 +28,7 @@
 .main-hero-section__button {
   margin-top: 2rem;
   grid-area: main-hero-section__button;
+  font-family: "Epilogue", "Sora", sans-serif !important;
 }
 
 .main-hero-section__image {

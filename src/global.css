@@ -1,4 +1,16 @@
 /* PAGE-LEVEL */
+:root {
+  --bakugoLight: #f3f2f1;
+  --eraserHead: #373638;
+  --eraserHeadLight: #414042;
+  --eraserHeadDark: #2d2d2d;
+  --newColor: #9ebcea;
+  --playerOne: #9ebcea;
+  --playerTwo: #ea9e9e;
+  --playerThree: #f8d996;
+  --playerFour: #8ddbe0;
+}
+
 html,
 body {
   margin: 0;
@@ -11,12 +23,21 @@ body {
   line-height: 1.65em;
 }
 
-p, li {
+code {
+  color: var(--playerOne);
+  background-color: var(--eraserHeadDark);
+  padding: 0.25em 0.5em;
+  border-radius: 5px;
+}
+
+p,
+li {
   margin-bottom: 1em !important;
 }
 
 h1 {
   margin-bottom: 1rem !important;
+  /* line-height: 100% !important; */
 }
 
 :is(h2, h3, h4) {
@@ -41,7 +62,30 @@ h1 {
   margin: 2em auto;
 }
 
-
 button {
   text-transform: none !important;
+}
+
+.callout {
+  background-color: var(--eraserHeadDark);
+  padding: 1rem;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+.callout code {
+  background-color: var(--eraserHead);
+}
+
+.callout,
+.callout.info {
+  border-left: 0.25rem solid var(--playerOne);
+}
+
+.callout.warn {
+  border-left: 0.25rem solid var(--playerThree);
+}
+
+.callout.error {
+  border-left: 0.25rem solid var(--playerFour);
 }

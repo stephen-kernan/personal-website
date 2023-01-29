@@ -59,20 +59,27 @@ export const App = () => {
       },
     },
     typography: {
-      fontFamily: "'Sora', sans-serif",
+      fontFamily: "'Epilogue', 'Sora', sans-serif",
       h1: {
         fontSize: "3rem",
         fontWeight: 900,
       },
       huge: {
         fontSize: "clamp(3.5rem, 14vw, 9rem)",
-        lineHeight: "clamp(3.5rem, 14vw, 9rem)",
+        lineHeight: "clamp(4.5rem, 18vw, 12rem)",
         fontWeight: 900,
       },
       semiHuge: {
         fontSize: "clamp(2rem, 10vw, 6rem)",
-        lineHeight: "clamp(2rem, 10vw, 6rem)",
+        lineHeight: "clamp(2.5rem, 12vw, 7rem)",
         fontWeight: 900,
+      },
+      subHeader: {
+        fontSize: "clamp(1rem, 5vw, 2.5rem)",
+        lineHeight: "clamp(2rem, 7.5vw, 3.5rem)",
+        fontWeight: 700,
+        // fontStyle: "italic",
+        marginTop: "0 !important",
       },
       h2: {
         fontSize: "2rem",

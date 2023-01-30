@@ -2,6 +2,10 @@
   clip-path: url(#pattern0) !important;
 }
 
+.main-hero-section__grid {
+  display: grid;
+}
+
 .main-hero-section__grid.huge {
   margin-block: 5em;
   display: grid;
@@ -33,6 +37,7 @@
 
 .main-hero-section__image {
   grid-area: main-hero-section__image;
+  visibility: visible;
 }
 
 @media screen and (min-width: 768px) {
@@ -60,9 +65,5 @@
 
   .main-hero-section__grid.left .main-hero-section__title {
     text-align: left;
-  }
-
-  .main-hero-section__image {
-    visibility: visible;
   }
 }

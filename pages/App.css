@@ -59,9 +59,7 @@
 }
 
 .page-container {
-  width: min(95%, 1500px);
   margin-inline: auto;
-  margin-top: min(1em, 10vh);
   padding-bottom: max(10em, 10vh);
 }
 

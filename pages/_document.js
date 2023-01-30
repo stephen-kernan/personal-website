@@ -6,13 +6,16 @@ export const Document = () => {
     <Html>
       <Head>
         <meta charset="utf-8" />
-        <link rel="icon" href="../public/personal-logo.svg" />
+        <link rel="icon" href="../public/images/personal-logo.svg" />
         <meta name="theme-color" content="#000000" />
-        <meta
+        {/* <meta
           name="description"
           content="Web site created using create-react-app"
+        /> */}
+        <link
+          rel="apple-touch-icon"
+          href="../public/images/personal-logo.svg"
         />
-        <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,7 +30,7 @@ export const Document = () => {
           manifest.json provides metadata used when your web app is installed on a
           user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
         */}
-        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+        {/* <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> */}
         {/* 
           Notice the use of %PUBLIC_URL% in the tags above.
           It will be replaced with the URL of the `public` folder during the build.

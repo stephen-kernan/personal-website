@@ -38,7 +38,7 @@ export const LandingPage = () => {
         <HeroSection
           float="left"
           buttonLabel="Here's a Guide"
-          buttonLink={"/blog/learning-to-code"}
+          buttonLink={"/blog/learn-to-code"}
           buttonVariant="contained"
           headerText="Learning to Code?"
           image={<ProgrammerSVG theme={theme} />}

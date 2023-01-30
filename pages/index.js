@@ -1,74 +1,11 @@
-// import React, { useState } from "react";
-// import { LandingPage } from "./LandingPage";
-// import { PageRoute } from "./PageRoute";
-// import { About } from "./About";
-// import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
-// import { Blog } from "./Blog/Blog";
-// import { BlogPost } from "./Blog/BlogPost";
-
-// const selectedColor = localStorage.getItem("themeColor");
-// let primary = selectedColor ? colorHexes[selectedColor] : playerOne;
-
-// export const App = () => {
-//   const isDarkMode =
-//     localStorage.getItem("darkMode") === "true" ||
-//     !localStorage.getItem("darkMode");
-//   let background = isDarkMode ? eraserHead : bakugoLight;
-//   // eslint-disable-next-line no-unused-vars
-//   const [color, setColor] = useState(primary);
-//   const [darkMode, setDarkMode] = useState(isDarkMode);
-
-//   const changeTheme = (newColor) => {
-//     localStorage.setItem("themeColor", newColor);
-//     setColor(colorHexes[newColor]);
-//   };
-
-//   const toggleDarkMode = () => {
-//     const newValue = !darkMode;
-//     localStorage.setItem("darkMode", newValue);
-//     setDarkMode(newValue);
-//   };
-
-//   return (
-//     <ThemeProvider theme={darkModeAdditions}>
-//       <CssBaseline />
-//       <BrowserRouter>
-//         <Switch>
-//           <PageRoute
-//             path="/"
-//             exact
-//             component={LandingPage}
-//             changeTheme={changeTheme}
-//             toggleDarkMode={toggleDarkMode}
-//           />
-//           <PageRoute
-//             path="/about"
-//             exact
-//             component={About}
-//             changeTheme={changeTheme}
-//             toggleDarkMode={toggleDarkMode}
-//           />
-//           <PageRoute
-//             path="/blog"
-//             exact
-//             component={Blog}
-//             changeTheme={changeTheme}
-//             toggleDarkMode={toggleDarkMode}
-//           />
-//           <PageRoute path="/blog/:title" exact component={BlogPost} />
-//         </Switch>
-//       </BrowserRouter>
-//     </ThemeProvider>
-//   );
-// };
 import { Container } from "@mui/material";
-import { Box, useTheme } from "@mui/system";
+import { useTheme } from "@mui/system";
 import React from "react";
 import { HeroSection } from "../src/Components/HeroSection/HeroSection";
 import { SEO } from "../src/Components/SEO/SEO";
 import { ProgrammerSVG } from "../src/Components/SVGs/ProgrammerSVG";
 import { ProfileSVG } from "../src/Components/SVGs/ProfileSVG";
-import { MainHeroSection } from "./MainHeroSection";
+import { MainHeroSection } from "../src/Components/HeroSection/MainHeroSection";
 import { GlobalNav } from "../src/Components/GlobalNav/GlobalNav";
 
 const pageTitle = "Welcome";

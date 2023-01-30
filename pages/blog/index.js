@@ -1,6 +1,6 @@
 import { Container, Typography } from "@mui/material";
 import React from "react";
-import { BlogTile } from "./BlogTile";
+import { BlogTile } from "../../src/Components/Blog/BlogTile";
 import { useTheme } from "@mui/system";
 import styles from "./Blog.module.css";
 import { SEO } from "../../src/Components/SEO/SEO";

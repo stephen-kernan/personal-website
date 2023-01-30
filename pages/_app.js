@@ -2,18 +2,11 @@
 import React, { useEffect } from "react";
 import { GoogleAnalytics } from "nextjs-google-analytics";
 
-import "prismjs/prism";
-import "prismjs/components/prism-jsx.min";
-import "prismjs/plugins/toolbar/prism-toolbar.min.css";
-import "prismjs/plugins/toolbar/prism-toolbar.min";
-import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard";
-
 import "./index.css";
 import "./App.css";
 import "./global.css";
 import "./prism.css";
 
-import styles from "./landingPage.module.css";
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 
 const bakugoLight = "#f3f2f1";
@@ -115,9 +108,6 @@ const darkModeAdditions = createTheme({
 });
 
 export const App = ({ Component, pageProps }) => {
-  useEffect(() => {
-    Prism.highlightAll();
-  });
   return (
     <>
       <ThemeProvider theme={darkModeAdditions}>

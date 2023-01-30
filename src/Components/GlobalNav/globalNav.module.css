@@ -2,7 +2,6 @@
   margin: 0 !important;
 }
 
-.global-nav__page-header,
 .global-nav__settings {
   width: 20%;
 }
@@ -13,11 +12,10 @@
 
 .global-nav__link--active {
   cursor: pointer;
-  border-bottom: 3px solid white;
 }
 
 .global-nav__container {
-  width: min(95%, 1500px);
+  width: min(95%, 1200px);
   margin-inline: auto;
   display: flex;
   justify-content: start !important;
@@ -42,11 +40,6 @@
   background-color: "#373737" !important;
 }
 
-[class$="-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"] {
-  display: flex !important;
-  align-items: center !important;
-}
-
 #theme-select {
   display: flex !important;
   align-items: center !important;
@@ -54,8 +47,7 @@
 
 @media screen and (min-width: 900px) {
   .global-nav__container {
-    display: grid;
-    grid-template-columns: repeat(3, 33%) !important;
+    display: flex;
   }
 
   .global-nav__container > * {

@@ -1,6 +1,7 @@
 import { Container, Link, Typography } from "@mui/material";
 import React from "react";
-import { SEO } from "../../../Components/SEO/SEO";
+import { SEO } from "../../../src/Components/SEO/SEO";
+import { GlobalNav } from "../../../src/Components/GlobalNav/GlobalNav";
 
 const pageTitle = "Learn to Code";
 const description =
@@ -10,6 +11,8 @@ export const LearnToCode = () => {
   return (
     <div className="page-container">
       <SEO pageTitle={pageTitle} description={description} />
+
+      <GlobalNav activeLink={"blog"} />
 
       <Container maxWidth="lg" className="content-container">
         <Typography
@@ -649,3 +652,5 @@ export const LearnToCode = () => {
     </div>
   );
 };
+
+export default LearnToCode;

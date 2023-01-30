@@ -1,15 +1,14 @@
-import React from "react";
-import "prismjs";
+import React, { useEffect, useState } from "react";
+
+import "prismjs/prism";
 import "prismjs/components/prism-jsx.min";
 import "prismjs/plugins/toolbar/prism-toolbar.min.css";
 import "prismjs/plugins/toolbar/prism-toolbar.min";
 import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard";
 
 import { Container, Typography } from "@mui/material";
-import { SEO } from "../../../Components/SEO/SEO";
-
-import "../../../prismer.css";
-import "../../../prism.css";
+import { SEO } from "../../../src/Components/SEO/SEO";
+import { GlobalNav } from "../../../src/Components/GlobalNav/GlobalNav";
 
 const pageTitle = "Prop Constructor Pattern";
 const description =
@@ -37,18 +36,42 @@ export const CalloutBlock = ({ variant = "info", contents = null }) => {
 };
 
 export const FormattedCodeBlock = ({ language, templateString = "" }) => {
+  const [mounted, setMounted] = useState(false);
   const firstNonSpaceIndex = templateString.search(/\S|$/) - 1;
   const spacesToEliminate = firstNonSpaceIndex - 4;
+
+  useEffect(() => {
+    Prism.highlightAll();
+    console.log("Highlighting");
+  }, [mounted]);
+
+  useEffect(() => {
+    setMounted(true);
+  });
 
   const trimmedTemplateString = templateString
     .split("\n")
     .map((str) => str.substring(spacesToEliminate))
     .join("\n");
 
+  if (!mounted) {
+    return (
+      <pre>
+        <code
+          data-prismjs-copy="📋 Copy to Clipboard"
+          data-prismjs-copy-success="✅ Copied!"
+        >
+          {trimmedTemplateString}
+        </code>
+      </pre>
+    );
+  }
+
   return (
     <pre>
       <code
         data-prismjs-copy="📋 Copy to Clipboard"
+        data-prismjs-copy-success="✅ Copied!"
         className={`language-${language}`}
       >
         {trimmedTemplateString}
@@ -61,6 +84,8 @@ export const PropConstructorPattern = () => {
   return (
     <div className="page-container">
       <SEO pageTitle={pageTitle} description={description} />
+
+      <GlobalNav activeLink={"blog"} />
 
       <Container maxWidth="lg" className="content-container">
         <Typography
@@ -523,7 +548,7 @@ export const PropConstructorPattern = () => {
           </li>
         </ol>
 
-        <Typography variant="body1" component="p">
+        {/* <Typography variant="body1" component="p">
           Full code for the <code>Button</code> can be found{" "}
           <a
             href="https://github.com/stephen-kernan/code-examples/blob/main/jest/propConstructorPattern/components/Button.js"
@@ -545,8 +570,10 @@ export const PropConstructorPattern = () => {
             here
           </a>
           .
-        </Typography>
+        </Typography> */}
       </Container>
     </div>
   );
 };
+
+export default PropConstructorPattern;

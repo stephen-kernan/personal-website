@@ -9,8 +9,8 @@ import "./prism.css";
 
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 
-const bakugoLight = "#f3f2f1";
-const eraserHead = "#373638";
+const bakugoLight = "#e3e2e1";
+const eraserHead = "#282728";
 const background = eraserHead;
 
 const newColor = "#9EBCEA";
@@ -48,19 +48,19 @@ const mhaTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: "'Epilogue', 'Sora', sans-serif",
+    fontFamily: "var(--bodyFont)",
     h1: {
-      fontSize: "3rem",
+      fontSize: "2.5rem",
       fontWeight: 900,
     },
     huge: {
-      fontSize: "clamp(3.5rem, 14vw, 9rem)",
-      lineHeight: "clamp(4.5rem, 18vw, 12rem)",
+      fontSize: "clamp(4rem, 10vw, 6rem)",
+      lineHeight: "clamp(4.5rem, 18vw, 10rem)",
       fontWeight: 900,
     },
     semiHuge: {
-      fontSize: "clamp(2rem, 10vw, 6rem)",
-      lineHeight: "clamp(2.5rem, 12vw, 7rem)",
+      fontSize: "clamp(2.5rem, 10vw, 4.5rem)",
+      lineHeight: "clamp(2.5rem, 12vw, 5.5rem)",
       fontWeight: 900,
     },
     subHeader: {
@@ -71,24 +71,26 @@ const mhaTheme = createTheme({
       marginTop: "0 !important",
     },
     h2: {
-      fontSize: "2rem",
+      fontSize: "clamp(1.25rem, 10vw, 1.5rem)",
+      lineHeight: "clamp(1.75rem, 10vw, 2.25rem)",
       fontWeight: 900,
+      color: "var(--playerOne)"
     },
     h3: {
-      fontSize: "1.5rem",
-      fontWeight: 600,
+      fontSize: "clamp(1.125rem, 1.75rem, 2px)",
+      fontWeight: 700,
     },
     h4: {
-      fontSize: "1.25rem",
+      fontSize: "clamp(1.125rem, 1.75rem, 2px)",
       fontWeight: 600,
     },
     body1: {
-      fontFamily: "'Epilogue', 'Sora', sans-serif",
-      fontSize: "clamp(1rem, 4vw, 1.25rem)",
+      fontFamily: "var(--bodyFont)",
+      fontSize: "clamp(1rem, 3vw, 1.1rem)",
       lineHeight: "1.75em",
     },
     body2: {
-      fontFamily: "'Sora', 'Epilogue', sans-serif",
+      fontFamily: "var(--titleFont)",
       fontSize: "1.25rem",
     },
   },

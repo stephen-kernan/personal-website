@@ -9,10 +9,11 @@ import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard";
 import { Container, Typography } from "@mui/material";
 import { SEO } from "../../../src/Components/SEO/SEO";
 import { GlobalNav } from "../../../src/Components/GlobalNav/GlobalNav";
+import {Title} from "../learn-to-code";
 
-const pageTitle = "Prop Constructor Pattern";
+const pageTitle = "Writing Clean Tests for React Components";
 const description =
-  "A simple way to write cleaner, more flexible tests for React.";
+  "The Prop Constructor pattern.";
 
 const getCalloutEmoji = (variant) => {
   switch (variant) {
@@ -88,17 +89,10 @@ export const PropConstructorPattern = () => {
       <GlobalNav activeLink={"blog"} />
 
       <Container maxWidth="lg" className="content-container">
-        <Typography
-          variant="semiHuge"
-          sx={{ color: "primary.main" }}
-          component="h1"
-        >
-          The Prop Constructor Pattern
-        </Typography>
-
-        <Typography variant="subHeader" component="h2">
-          A simple way to write cleaner, more flexible React tests.
-        </Typography>
+        <Title
+          text="Simplify Tests for React Components"
+          subtitleText="The Prop Constructor Pattern"
+        />
 
         <Typography variant="body1" component="p">
           Imagine that you've built a simple <code>Button</code> component, like

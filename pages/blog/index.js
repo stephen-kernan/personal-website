@@ -9,11 +9,11 @@ import { GlobalNav } from "../../src/Components/GlobalNav/GlobalNav";
 const categories = [
   {
     url: "/learn-to-code",
-    title: "Learning to Code",
+    title: "Learn to Code: Getting Started",
   },
   {
     url: "/prop-constructor-pattern",
-    title: "The Prop Constructor Pattern: Simple, Clean React Tests",
+    title: "Simplify Tests for React Components",
   },
 ];
 

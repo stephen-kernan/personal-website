@@ -37,7 +37,16 @@
 
 .settings-modal__box {
   margin: auto !important;
-  background-color: "#373737" !important;
+  background-color: var(--eraserHead) !important;
+}
+
+.controllerButton {
+  aspect-ratio: 1 !important;
+  display: flex;
+}
+
+.controllerButton svg {
+  font-size: 2rem;
 }
 
 #theme-select {

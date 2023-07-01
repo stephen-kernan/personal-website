@@ -1,20 +1,24 @@
 /* PAGE-LEVEL */
 :root {
   --bakugoLight: #f3f2f1;
-  --eraserHead: #373638;
-  --eraserHeadLight: #414042;
+  --eraserHead: #282728;
+  --eraserHeadLight: #373638;
   --eraserHeadDark: #2d2d2d;
   --newColor: #9ebcea;
   --playerOne: #9ebcea;
   --playerTwo: #ea9e9e;
   --playerThree: #f8d996;
   --playerFour: #8ddbe0;
+  --bodyFont: "Poppins", sans-serif;
+  --titleFont: "Sora", sans-serif;
 }
 
 html,
 body {
   margin: 0;
   height: 100%;
+  font-size: 16px;
+  background: var(--eraserHead);
 }
 
 body {
@@ -33,7 +37,7 @@ code {
 p,
 li {
   margin-bottom: 1em !important;
-  font-family: "Epilogue", sans-serif;
+  font-family: var(--bodyFont);
 }
 
 h1 {

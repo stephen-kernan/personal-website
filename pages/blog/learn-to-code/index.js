@@ -7,6 +7,26 @@ const pageTitle = "Learn to Code";
 const description =
   "Anyone can learn to code. Like any skill, it just takes time and practice. That said, teaching oneself to code can be daunting. There are so many places one can start and an infinite number of paths from there. This guide is a starting point for anyone interested in learning. It consists of tips and tricks for getting started, as well as the free resources that I used as I taught myself to code.";
 
+export const Title = ({ text, subtitleText }) => {
+  return (
+    <>
+      <Typography
+        variant="semiHuge"
+        sx={{ color: "primary.main" }}
+        component="h1"
+      >
+        {text}
+      </Typography>
+      <Typography
+        variant="h2"
+        sx={{ color: "primary.main", marginTop: "0 !important", marginBottom: "2rem !important" }}
+        component="h2">
+        {subtitleText}
+      </Typography>
+    </>
+  )
+}
+
 export const LearnToCode = () => {
   return (
     <div className="page-container">
@@ -15,13 +35,7 @@ export const LearnToCode = () => {
       <GlobalNav activeLink={"blog"} />
 
       <Container maxWidth="lg" className="content-container">
-        <Typography
-          variant="semiHuge"
-          sx={{ color: "primary.main" }}
-          component="h1"
-        >
-          Learn to Code: Strategies for Getting Started
-        </Typography>
+        <Title text="Learn to Code" subtitleText="Tips & Tricks for Getting Started" />
 
         <Typography variant="body1" component="p">
           Anyone can learn to code. Like any skill, it just takes time and
@@ -116,21 +130,21 @@ export const LearnToCode = () => {
             <Typography variant="body1" component="li">
               🎢 What is fun for you?
             </Typography>
-            <span>
+            <Typography variant="body1" component="p">
               Choosing a language that helps you build a project you enjoy makes
               the experience of learning to code so much better. You’ll also
               find it easier to push through when you’re frustrated.
-            </span>
+            </Typography>
             <Typography variant="body1" component="li">
               ✅ What are your goals?
             </Typography>
-            <span>
+            <Typography variant="body1" component="p">
               If your goal is a career change, I highly recommend searching for
               jobs you would enjoy at companies you’re interested in and see
               what qualifications are listed. Finding the commonalities among a
               few positions and starting there will save you a lot of
               guess-work.
-            </span>
+            </Typography>
             <Typography variant="body1" component="li">
               🙈 Still can’t decide?
             </Typography>

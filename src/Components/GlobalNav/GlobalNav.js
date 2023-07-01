@@ -11,6 +11,7 @@ import {
   useTheme,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import SportsEsportsRoundedIcon from "@mui/icons-material/SportsEsportsRounded";
 
 import styles from "./globalNav.module.css";
 

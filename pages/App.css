@@ -49,7 +49,7 @@
 }
 
 .page-nav {
-  background-color: #373638 !important;
+  background-color: var(--eraserHead) !important;
   background-image: none !important;
   margin: 0;
 }
@@ -65,7 +65,9 @@
 
 .content-container {
   margin-block: 5em;
+  margin-inline: auto;
   padding-inline: 0 !important;
+  max-width: 60%;
 }
 
 .landing-page {
@@ -90,7 +92,17 @@ li {
   margin: 1.5em auto 0.75em auto;
 }
 
+@media (max-width: 1024px) {
+  .content-container {
+    max-width: 80%;
+  }
+}
 @media (max-width: 850px) {
+  .content-container {
+    margin-block: 2em;
+    max-width: 80%;
+  }
+
   .dark-mode-paper {
     padding: 2em 3em !important;
     margin: 2em auto;
@@ -101,6 +113,10 @@ li {
   h1 {
     margin-top: 1em;
     font-size: 1.75em;
+  }
+
+  .content-container {
+    max-width: calc(100% - 2em);
   }
 
   .dark-mode-paper {

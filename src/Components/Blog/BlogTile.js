@@ -2,7 +2,7 @@ import { Typography } from "@mui/material";
 import { useTheme } from "@mui/system";
 import React from "react";
 import { getThemeColor } from "../../helpers/theme.helpers";
-import "./blog.css";
+import styles from "../../../pages/blog/Blog.module.css";
 
 export const BlogTile = ({ number, title, url }) => {
   const theme = useTheme();
@@ -15,7 +15,7 @@ export const BlogTile = ({ number, title, url }) => {
 
   return (
     <div
-      className="blog-tile"
+      className={styles["blog-tile"]}
       style={{ backgroundColor: themeColor }}
       onClick={redirectToURL}
     >

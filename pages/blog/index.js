@@ -1,18 +1,19 @@
 import { Container, Typography } from "@mui/material";
 import React from "react";
-import { BlogTile } from "./BlogTile";
+import { BlogTile } from "../../src/Components/Blog/BlogTile";
 import { useTheme } from "@mui/system";
-import "./blog.css";
-import { SEO } from "../../Components/SEO/SEO";
+import styles from "./Blog.module.css";
+import { SEO } from "../../src/Components/SEO/SEO";
+import { GlobalNav } from "../../src/Components/GlobalNav/GlobalNav";
 
 const categories = [
   {
     url: "/learn-to-code",
-    title: "Learning to Code",
+    title: "Learn to Code: Getting Started",
   },
   {
     url: "/prop-constructor-pattern",
-    title: "The Prop Constructor Pattern: Simple, Clean Tests in React",
+    title: "Simplify Tests for React Components",
   },
 ];
 
@@ -23,11 +24,13 @@ export const Blog = ({ description }) => {
     <div className="page-container">
       <SEO pageTitle={"Blog"} description={description} />
 
+      <GlobalNav activeLink={"blog"} />
+
       <Container maxWidth="lg" className="content-container">
         <Typography variant="huge" sx={{ color: theme.playerOne }}>
           Blog
         </Typography>
-        <div className="blog-grid">
+        <div className={styles["blog-grid"]}>
           {categories.map((category, index) => (
             <BlogTile number={index} {...category} />
           ))}
@@ -36,3 +39,5 @@ export const Blog = ({ description }) => {
     </div>
   );
 };
+
+export default Blog;

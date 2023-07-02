@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import {
   AppBar,
   Box,
@@ -10,15 +11,11 @@ import {
   useTheme,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import React, { useState } from "react";
-import { useLocation } from "react-router";
+import SportsEsportsRoundedIcon from "@mui/icons-material/SportsEsportsRounded";
 
-import "./globalNav.css";
+import styles from "./globalNav.module.css";
 
-export const MobileDrawer = ({
-  links,
-  activeLink,
-}) => {
+export const MobileDrawer = ({ links, activeLink }) => {
   const theme = useTheme();
 
   return (
@@ -33,43 +30,31 @@ export const MobileDrawer = ({
       }}
     >
       {links.map((link) => (
-        <Link
-          href={link.path}
-          underline="none"
+        <Typography
+          variant="body2"
+          component="a"
+          className={"global-nav__link"}
           sx={{
+            color: "bakugoLight",
+            borderBottom: `4px solid ${
+              activeLink === link.path
+                ? theme.palette.primary.main
+                : "transparent"
+            }`,
             marginBottom: "1rem",
           }}
+          href={link.path}
+          underline="none"
         >
-          <Typography
-            variant="body2"
-            component="a"
-            className="global-nav__link"
-            sx={{
-              color: "bakugoLight",
-              borderBottom: `4px solid ${
-                activeLink === link.path
-                  ? theme.palette.primary.main
-                  : "transparent"
-              }`,
-            }}
-          >
-            {link.label}
-          </Typography>
-        </Link>
+          {link.label}
+        </Typography>
       ))}
       <Divider variant="middle" sx={{ marginTop: "2rem" }} />
     </Box>
   );
 };
 
-const MobileNav = ({
-  links,
-  activeLink,
-  isDarkMode,
-  open,
-  toggleMenu,
-  toggleDarkMode,
-}) => {
+const MobileNav = ({ links, activeLink, open, toggleMenu }) => {
   return (
     <div>
       <IconButton id="openmenu" onClick={toggleMenu}>
@@ -89,23 +74,15 @@ const MobileNav = ({
         variant="temporary"
         onClose={toggleMenu}
       >
-        <MobileDrawer
-          activeLink={activeLink}
-          links={links}
-          isDarkMode={isDarkMode}
-          toggleDarkMode={toggleDarkMode}
-        />
+        <MobileDrawer activeLink={activeLink} links={links} />
       </Drawer>
     </div>
   );
 };
 
-export const GlobalNav = ({ toggleDarkMode }) => {
+export const GlobalNav = ({ activeLink }) => {
   const [displayMenu, setDisplayMenu] = useState(false);
-  const location = useLocation();
   const theme = useTheme();
-  const activeLink = location.pathname;
-  const isDarkMode = localStorage.getItem("darkMode") === "true";
 
   const links = [
     {
@@ -127,51 +104,53 @@ export const GlobalNav = ({ toggleDarkMode }) => {
   };
 
   return (
-    <AppBar position="static" className="page-nav global-nav">
-      <Toolbar className="global-nav__container" sx={{ bgcolor: "eraserHead" }}>
+    <AppBar position="static" className={`page-nav global-nav`}>
+      <Toolbar
+        className={styles["global-nav__container"]}
+        sx={{ bgcolor: "eraserHead" }}
+      >
         <Box sx={{ display: { xs: "flex", md: "none" }, width: "min-content" }}>
           <MobileNav
             activeLink={activeLink}
-            isDarkMode={isDarkMode}
             links={links}
             open={displayMenu}
             toggleMenu={toggleMenu}
-            toggleDarkMode={toggleDarkMode}
           />
         </Box>
-        <Link href="/" underline="none">
-          <Typography
-            variant="h3"
-            component="a"
-            className="global-nav__page-header global-nav__link"
-            sx={{ color: "bakugoLight" }}
-          >
-            stephen kernan
-          </Typography>
-        </Link>
+        <Typography
+          variant="h3"
+          component={Link}
+          className={`${styles["global-nav__page-header"]} ${styles["global-nav__link"]}`}
+          sx={{ color: "bakugoLight" }}
+          href="/"
+          underline="none"
+        >
+          stephen kernan
+        </Typography>
 
         <Box
-          className="global-nav__middle-section"
+          className={styles["global-nav__middle-section"]}
           sx={{ display: { xs: "none", md: "flex" } }}
         >
           {links.map((link) => (
-            <Link href={link.path} underline="none">
-              <Typography
-                variant="body2"
-                component="a"
-                className="global-nav__link"
-                sx={{
-                  color: "bakugoLight",
-                  borderBottom: `4px solid ${
-                    activeLink === link.path
-                      ? theme.palette.primary.main
-                      : "transparent"
-                  }`,
-                }}
-              >
-                {link.label}
-              </Typography>
-            </Link>
+            <Typography
+              variant="body2"
+              component={Link}
+              className={"global-nav__link"}
+              sx={{
+                display: { xs: "none", md: "flex" },
+                color: "bakugoLight",
+                borderBottom: `4px solid ${
+                  activeLink === link.label
+                    ? theme.palette.primary.main
+                    : "transparent"
+                }`,
+              }}
+              href={link.path}
+              underline="none"
+            >
+              {link.label}
+            </Typography>
           ))}
         </Box>
       </Toolbar>

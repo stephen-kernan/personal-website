@@ -1,9 +1,10 @@
-import { Container, Grid, Link, Typography, useTheme } from "@mui/material";
 import React from "react";
-import { EquipmentSVG } from "../../Components/SVGs/EquipmentSVG";
-import { HobbiesSVG } from "../../Components/SVGs/HobbiesSVG";
-import { SEO } from "../../Components/SEO/SEO";
-import "./about.css";
+import { Container, Grid, Link, Typography, useTheme } from "@mui/material";
+import { EquipmentSVG } from "../../src/Components/SVGs/EquipmentSVG";
+import { HobbiesSVG } from "../../src/Components/SVGs/HobbiesSVG";
+import { SEO } from "../../src/Components/SEO/SEO";
+import { GlobalNav } from "../../src/Components/GlobalNav/GlobalNav";
+import styles from "./about.module.css";
 
 const pageTitle = "About Me";
 const description =
@@ -12,22 +13,28 @@ const description =
 export const About = () => {
   const theme = useTheme();
   return (
-    <div className="page-container">
+    <div className={"page-container"}>
       <SEO pageTitle={pageTitle} description={description} />
 
-      <Container maxWidth="lg" className="content-container">
+      <GlobalNav />
+
+      <Container maxWidth="lg" className={"content-container"}>
         <Typography variant="semiHuge" component="h1" color="primary">
           About Me
         </Typography>
 
         {/* CURRENT HOBBIES */}
-        <Grid container spacing={0} className="about-me__category-container">
+        <Grid
+          container
+          spacing={0}
+          className={styles["about-me__category-container"]}
+        >
           <Grid item s={9}>
             <Typography
               variant="h2"
               component="h2"
               color="primary"
-              className="sub-header"
+              className={styles["sub-header"]}
             >
               Current Hobbies
             </Typography>
@@ -67,13 +74,17 @@ export const About = () => {
         </Grid>
 
         {/* EQUIPMENT */}
-        <Grid container spacing={0} className="about-me__category-container">
+        <Grid
+          container
+          spacing={0}
+          className={styles["about-me__category-container"]}
+        >
           <Grid item s={9}>
             <Typography
               variant="h2"
               component="h2"
               color="primary"
-              className="sub-header"
+              className={styles["sub-header"]}
             >
               My Equipment
             </Typography>
@@ -119,3 +130,5 @@ export const About = () => {
     </div>
   );
 };
+
+export default About;

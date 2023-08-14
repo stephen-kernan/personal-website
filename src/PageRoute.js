@@ -1,8 +1,8 @@
-import React from "react";
-import { Route, useHistory, useLocation } from "react-router";
-import { GlobalNav } from "./Components/GlobalNav/GlobalNav";
+import React from 'react'
+import { Route, useHistory, useLocation } from 'react-router'
+import { GlobalNav } from './Components/GlobalNav/GlobalNav'
 
-import "./global.css";
+import './global.css'
 
 // the place where global nav lives, and themes are aplenty.
 export const PageRoute = ({
@@ -11,15 +11,15 @@ export const PageRoute = ({
   toggleDarkMode,
   ...rest
 }) => {
-  const history = useHistory();
-  const location = useLocation();
+  const history = useHistory()
+  const location = useLocation()
 
   return (
-    <Route {...rest}>
-      <div className="wrapper">
-        <GlobalNav changeTheme={changeTheme} toggleDarkMode={toggleDarkMode} />
-        <Component location={location} history={history} />
-      </div>
-    </Route>
-  );
-};
+      <Route {...rest}>
+          <div className="wrapper">
+              <GlobalNav changeTheme={changeTheme} toggleDarkMode={toggleDarkMode} />
+              <Component location={location} history={history} />
+          </div>
+      </Route>
+  )
+}

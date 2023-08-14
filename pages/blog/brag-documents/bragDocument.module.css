@@ -1,0 +1,22 @@
+.callout {
+    padding: 1.5rem;
+    background: var(--eraserHeadLight);
+    border-radius: 25px;
+    margin-block: 1.5rem;
+}
+
+.callout > * {
+    margin-bottom: 0 !important;
+}
+
+.callout.info {
+    border: 3px solid var(--playerOne);
+}
+
+.callout.warning {
+    border: 3px solid var(--playerThree);
+}
+
+.callout.error, .callout.danger {
+    border: 3px solid var(--playerTwo);
+}

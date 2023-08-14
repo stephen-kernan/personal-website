@@ -3,17 +3,17 @@ export const getThemeColor = (number, theme, invert) => {
     theme.playerOne,
     theme.playerTwo,
     theme.playerThree,
-    theme.playerFour,
-  ];
+    theme.playerFour
+  ]
 
   const invertedThemeColors = [
     theme.playerTwo,
     theme.playerOne,
     theme.playerFour,
-    theme.playerThree,
-  ];
+    theme.playerThree
+  ]
 
-  const themeColors = invert ? invertedThemeColors : standardThemeColors;
+  const themeColors = invert ? invertedThemeColors : standardThemeColors
 
-  return themeColors[number % 4];
-};
+  return themeColors[number % 4]
+}

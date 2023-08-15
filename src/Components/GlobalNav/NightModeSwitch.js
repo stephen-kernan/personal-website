@@ -1,3 +1,4 @@
+import React from 'react'
 import { FormControlLabel, Switch, styled } from '@mui/material'
 
 export const NightModeSwitch = ({ mobile, onClick, checked = true }) => {

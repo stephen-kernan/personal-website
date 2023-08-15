@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import 'prismjs/prism'
+import Prism from 'prismjs/prism'
 import 'prismjs/components/prism-jsx.min'
 import 'prismjs/plugins/toolbar/prism-toolbar.min.css'
 import 'prismjs/plugins/toolbar/prism-toolbar.min'
@@ -440,7 +440,7 @@ export const PropConstructorPattern = () => {
             label: "Test",
             onClick: onClickMock,
             variant: "primary",
-            disabled: false,
+            disabled: false
           };
 
           // allow a custom props object as a parameter to your render function.
@@ -453,6 +453,8 @@ export const PropConstructorPattern = () => {
             // then, we unpack the combined props into our component
             render(<Button {...componentProps} />);
           };
+          
+          renderButton({ label: "New Value" })
         `}
               />
 

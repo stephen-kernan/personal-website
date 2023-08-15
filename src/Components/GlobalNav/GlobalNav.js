@@ -11,7 +11,6 @@ import {
   useTheme
 } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
-import SportsEsportsRoundedIcon from '@mui/icons-material/SportsEsportsRounded'
 
 import styles from './globalNav.module.css'
 
@@ -31,6 +30,7 @@ export const MobileDrawer = ({ links, activeLink }) => {
       >
           {links.map((link) => (
               <Typography
+                  key={link.path}
                   variant="body2"
                   component="a"
                   className={'global-nav__link'}
@@ -134,6 +134,7 @@ export const GlobalNav = ({ activeLink }) => {
               >
                   {links.map((link) => (
                       <Typography
+                          key={link.path}
                           variant="body2"
                           component={Link}
                           className={'global-nav__link'}

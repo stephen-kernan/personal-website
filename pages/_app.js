@@ -1,5 +1,5 @@
 // pages/_app.js
-import React, { useEffect } from 'react'
+import React from 'react'
 import { GoogleAnalytics } from 'nextjs-google-analytics'
 
 import './index.css'
